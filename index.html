@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['JetBrains Mono', 'monospace'],
+            sans: ['DM Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="h-full" style="background: var(--bg-primary);">
+  <div class="binary-bg"><!-- Binary Background -->
+    <div class="binary-content">
+      <div id="binary-layer-1"></div>
+      <div id="binary-layer-2"></div>
+    </div>
+  </div>
+  <div id="app-root" class="w-full h-full overflow-auto font-sans relative z-10" style="color: var(--text-primary);">
+    <!-- NAV -->
+    <header class="fixed top-0 left-0 w-full z-50"
+      style="background: rgba(10, 14, 23, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 229, 160, 0.08);">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#hero"
+          class="font-mono font-bold text-lg" style="color: var(--accent);" id="nav-logo">~/alex</a>
+        <div class="hidden md:flex items-center gap-8"><a href="#projects"
+            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
+            style="color: var(--text-primary);">projects</a> <a href="#skills"
+            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
+            style="color: var(--text-primary);">skills</a> <a href="#blog"
+            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
+            style="color: var(--text-primary);">blog</a> <a href="#contact"
+            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
+            style="color: var(--text-primary);">contact</a>
+        </div><button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu" style="color: var(--accent);">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg></button>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-3"><a href="#projects"
+          class="font-mono text-sm py-2 opacity-70 hover:opacity-100" style="color: var(--text-primary);">projects</a>
+        <a href="#skills" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
+          style="color: var(--text-primary);">skills</a> <a href="#blog"
+          class="font-mono text-sm py-2 opacity-70 hover:opacity-100" style="color: var(--text-primary);">blog</a> <a
+          href="#contact" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
+          style="color: var(--text-primary);">contact</a>
+      </div>
+    </header><!-- HERO -->
+    <section id="hero" class="grid-bg relative flex items-center justify-center px-6"
+      style="min-height: 100%; padding-top: 80px;">
+      <div class="absolute top-1/4 left-1/4 w-72 h-72 rounded-full opacity-20 blur-3xl pointer-events-none"
+        style="background: radial-gradient(circle, rgba(0,229,160,0.3), transparent 70%);"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-15 blur-3xl pointer-events-none"
+        style="background: radial-gradient(circle, rgba(59,130,246,0.3), transparent 70%);"></div>
+      <div class="max-w-3xl text-center relative z-10">
+        <div class="reveal reveal-d1 inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 font-mono text-xs"
+          style="background: rgba(0, 229, 160, 0.08); border: 1px solid rgba(0, 229, 160, 0.2); color: var(--accent);">
+          <span class="w-2 h-2 rounded-full" style="background: var(--accent);"></span> <span>available for
+            opportunities</span>
+        </div>
+        <h1 class="reveal reveal-d2 font-mono font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-4"
+          style="color: var(--text-primary);"><span style="color: var(--accent);">&gt; </span><span
+            id="hero-name-text">Alex Chen</span></h1>
+        <div class="reveal reveal-d3 font-mono text-base sm:text-lg md:text-xl mb-6"
+          style="color: var(--accent-secondary);"><span id="hero-title-text">Software Developer &amp; CS Student</span>
+        </div>
+        <div class="reveal reveal-d4 font-mono text-sm sm:text-base mb-10 h-8 flex items-center justify-center"
+          style="color: rgba(226, 232, 240, 0.6);"><span id="typing-target"></span><span class="cursor-blink"
+            style="color: var(--accent);">█</span>
+        </div>
+        <div class="reveal reveal-d5 flex flex-wrap gap-4 justify-center"><a href="#projects"
+            class="glow-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-semibold"
+            style="background: var(--accent); color: var(--bg-primary);">
+            <svg width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+              <path d="M8 0l2.5 5.3L16 6.2l-4 3.8 1 5.5L8 12.8l-5 2.7 1-5.5-4-3.8 5.5-.9z" />
+            </svg> View Projects </a> <a href="#contact"
+            class="glow-btn-secondary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-semibold"
+            style="background: transparent; border: 1px solid var(--accent-secondary); color: var(--accent-secondary);">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+              <path d="M4 4h16v16H4z" />
+              <path d="M4 4l8 8 8-8" />
+            </svg> Contact Me </a>
+        </div>
+      </div>
+    </section><!-- ABOUT / INTRO -->
+    <section id="about" class="section-hidden px-6 py-24" style="border-top: 1px solid rgba(0,229,160,0.08);">
+      <div class="max-w-4xl mx-auto">
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a> <span>/</span> <span
+            class="breadcrumb-current">about.md</span>
+        </div>
+        <div class="vim-buffer">
+          <div class="vim-header">
+            about.md [1/1] - "~/portfolio/about.md" 14L, 445B
+          </div>
+          <div class="vim-content-wrapper">
+            <div class="vim-gutter" id="vim-gutter-about">
+              01<br />
+              02<br />
+              03<br />
+              04<br />
+              05<br />
+              06<br />
+              07<br />
+              08<br />
+              09<br />
+              10<br />
+            </div>
+            <div class="vim-content" id="vim-content-about">
+              I'm a CS student passionate about performance and systems.<br />
+              I build everything from neural network optimizers to game engines<br />
+              and distributed systems. This portfolio showcases some of my favorite<br />
+              work across low-level systems programming, AI/ML, graphics,<br />
+              and full-stack development.<br />
+              <br />
+              When I'm not coding, you'll find me optimizing memory layouts,<br />
+              reading research papers, or contributing to open-source projects.<br />
+              <br />
+              Let's build something amazing together.
+            </div>
+          </div>
+          <div class="vim-status"><span>~/portfolio</span> <span id="cursor-pos">Line 1, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </section><!-- PROJECTS -->
+    <section id="projects" class="section-hidden px-6 py-24">
+      <div class="max-w-6xl mx-auto">
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a> <span>/</span> <span
+            class="breadcrumb-current">projects</span>
+        </div>
+        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
+            style="color: var(--accent);">00.</span>
+          <h2 id="projects-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
+            style="color: var(--text-primary);">Featured Projects</h2>
+          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projects-grid">
+          <div class="glass-card rounded-xl p-6 lg:col-span-2 flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div class="p-3 rounded-lg" style="background: rgba(0, 229, 160, 0.1);">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                  style="color: var(--accent);">
+                  <path
+                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+              </div><span class="font-mono text-xs px-2 py-1 rounded"
+                style="background: rgba(0,229,160,0.1); color: var(--accent);">⭐ Featured</span>
+            </div>
+            <h3 class="font-mono font-semibold text-lg mb-2" style="color: var(--text-primary);">NeuralVox Engine</h3>
+            <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">Real-time speech synthesis engine using
+              custom transformer architecture. Achieves 2.3x inference speedup with CUDA kernel optimizations and
+              quantized model weights.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); color: var(--accent);">Python</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); color: var(--accent);">PyTorch</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); color: var(--accent);">CUDA</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); color: var(--accent);">C++</span>
+            </div>
+            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer"
+                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold"
+                style="background: var(--accent); color: var(--bg-primary);">
+                <svg width="14" height="14" fill="currentColor" viewbox="0 0 16 16">
+                  <path d="M6.354 5.5H4a3 3 0 000 6h3a3 3 0 002.83-4H8.83A2 2 0 007 9.5H4a2 2 0 110-4h2.354z" />
+                  <path d="M9.646 10.5H12a3 3 0 000-6H9a3 3 0 00-2.83 4h1.17A2 2 0 019 6.5h3a2 2 0 110 4H9.646z" />
+                </svg> Live Demo </a> <a href="#" target="_blank" rel="noopener noreferrer"
+                class="glow-btn-secondary inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold"
+                style="border: 1px solid rgba(59,130,246,0.4); color: var(--accent-secondary);">
+                <svg width="14" height="14" fill="currentColor" viewbox="0 0 16 16">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg> GitHub </a>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-6 flex flex-col">
+            <div class="p-3 rounded-lg mb-4 w-fit" style="background: rgba(59,130,246,0.1);">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                style="color: var(--accent-secondary);">
+                <path d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+              </svg>
+            </div>
+            <h3 class="font-mono font-semibold text-lg mb-2" style="color: var(--text-primary);">VoxelForge</h3>
+            <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">GPU-accelerated voxel rendering engine
+              with real-time ray marching, dynamic lighting, and infinite terrain generation.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.15); color: var(--accent-secondary);">C++</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.15); color: var(--accent-secondary);">OpenGL</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.15); color: var(--accent-secondary);">GLSL</span>
+            </div>
+            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer"
+                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold"
+                style="background: var(--accent); color: var(--bg-primary);">Live Demo</a> <a href="#" target="_blank"
+                rel="noopener noreferrer"
+                class="glow-btn-secondary inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold"
+                style="border: 1px solid rgba(59,130,246,0.4); color: var(--accent-secondary);">GitHub</a>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-6 flex flex-col">
+            <div class="p-3 rounded-lg mb-4 w-fit" style="background: rgba(168,85,247,0.1);">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                style="color: #a855f7;">
+                <path
+                  d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3M3.75 4.5h16.5a1.5 1.5 0 011.5 1.5v12a1.5 1.5 0 01-1.5 1.5H3.75a1.5 1.5 0 01-1.5-1.5V6a1.5 1.5 0 011.5-1.5z" />
+              </svg>
+            </div>
+            <h3 class="font-mono font-semibold text-lg mb-2" style="color: var(--text-primary);">MicroOS</h3>
+            <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">Minimalist operating system kernel with
+              custom memory allocator, preemptive scheduler, and ext2 filesystem driver.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.15); color: #a855f7;">C</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.15); color: #a855f7;">x86
+                ASM</span> <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.15); color: #a855f7;">QEMU</span>
+            </div>
+            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer"
+                class="glow-btn-secondary inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold"
+                style="border: 1px solid rgba(59,130,246,0.4); color: var(--accent-secondary);">GitHub</a>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-6 flex flex-col lg:col-span-2">
+            <div class="flex items-start justify-between mb-4">
+              <div class="p-3 rounded-lg" style="background: rgba(251,191,36,0.1);">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                  style="color: #fbbf24;">
+                  <path
+                    d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                </svg>
+              </div><span class="font-mono text-xs px-2 py-1 rounded"
+                style="background: rgba(251,191,36,0.1); color: #fbbf24;">🚧 In Progress</span>
+            </div>
+            <h3 class="font-mono font-semibold text-lg mb-2" style="color: var(--text-primary);">DistributedKV</h3>
+            <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">Raft-consensus distributed key-value
+              store with linearizable reads, snapshot-based replication, and a gRPC API layer. Handles 50k ops/sec
+              across 5-node clusters.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.15); color: #fbbf24;">Go</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.15); color: #fbbf24;">gRPC</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.15); color: #fbbf24;">Docker</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
+                style="background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.15); color: #fbbf24;">Raft</span>
+            </div>
+            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer"
+                class="glow-btn-secondary inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold"
+                style="border: 1px solid rgba(59,130,246,0.4); color: var(--accent-secondary);">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- SKILLS -->
+    <section id="skills" class="section-hidden px-6 py-24">
+      <div class="max-w-6xl mx-auto">
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a> <span>/</span> <span
+            class="breadcrumb-current">skills</span>
+        </div>
+        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
+            style="color: var(--accent);">01.</span>
+          <h2 id="skills-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
+            style="color: var(--text-primary);">Tech Stack</h2>
+          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="p-2 rounded-lg" style="background: rgba(0,229,160,0.1);">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                  style="color: var(--accent);">
+                  <path d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                </svg>
+              </div>
+              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Languages &amp; Systems</h3>
+            </div>
+            <div class="flex flex-wrap gap-2"><span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">C
+                / C++</span> <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">Python</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">Go</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">Rust</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">JavaScript</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">TypeScript</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">x86
+                ASM</span>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="p-2 rounded-lg" style="background: rgba(59,130,246,0.1);">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                  style="color: var(--accent-secondary);">
+                  <path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                </svg>
+              </div>
+              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Frameworks &amp; AI/ML</h3>
+            </div>
+            <div class="flex flex-wrap gap-2"><span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">PyTorch</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">TensorFlow</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">React</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">Node.js</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">OpenGL</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">CUDA</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">Vulkan</span>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="p-2 rounded-lg" style="background: rgba(168,85,247,0.1);">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                  style="color: #a855f7;">
+                  <path
+                    d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" />
+                </svg>
+              </div>
+              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Tools &amp; DevOps</h3>
+            </div>
+            <div class="flex flex-wrap gap-2"><span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">Git</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">Docker</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">Linux</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">GDB</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">CMake</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">CI/CD</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">Kubernetes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- BLOG -->
+    <section id="blog" class="section-hidden px-6 py-24">
+      <div class="max-w-6xl mx-auto">
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a> <span>/</span> <span
+            class="breadcrumb-current">blog</span>
+        </div>
+        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
+            style="color: var(--accent);">02.</span>
+          <h2 id="blog-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
+            style="color: var(--text-primary);">Latest Articles</h2>
+          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"><a href="#" target="_blank"
+            rel="noopener noreferrer" class="blog-card glass-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-center gap-2 mb-3"><span class="font-mono text-xs"
+                style="color: rgba(226,232,240,0.4);">2024.12.15</span> <span
+                class="text-xs px-2 py-0.5 rounded font-mono"
+                style="background: rgba(0,229,160,0.08); color: var(--accent);">Systems</span>
+            </div>
+            <h3 class="font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors"
+              style="color: var(--text-primary);">Writing a Memory Allocator from Scratch in C</h3>
+            <p class="text-sm flex-1 mb-4" style="color: rgba(226,232,240,0.5);">A deep dive into implementing malloc(),
+              free(), and memory coalescing with buddy allocation strategies.</p>
+            <div class="blog-line h-0.5 rounded" style="background: var(--accent);"></div>
+          </a> <a href="#" target="_blank" rel="noopener noreferrer"
+            class="blog-card glass-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-center gap-2 mb-3"><span class="font-mono text-xs"
+                style="color: rgba(226,232,240,0.4);">2024.11.28</span> <span
+                class="text-xs px-2 py-0.5 rounded font-mono"
+                style="background: rgba(59,130,246,0.08); color: var(--accent-secondary);">AI/ML</span>
+            </div>
+            <h3 class="font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors"
+              style="color: var(--text-primary);">Optimizing Transformer Inference with Custom CUDA Kernels</h3>
+            <p class="text-sm flex-1 mb-4" style="color: rgba(226,232,240,0.5);">How I achieved a 2.3x speedup on GPT-2
+              inference by writing fused attention kernels and quantizing weights to INT8.</p>
+            <div class="blog-line h-0.5 rounded" style="background: var(--accent-secondary);"></div>
+          </a> <a href="#" target="_blank" rel="noopener noreferrer"
+            class="blog-card glass-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-center gap-2 mb-3"><span class="font-mono text-xs"
+                style="color: rgba(226,232,240,0.4);">2024.10.09</span> <span
+                class="text-xs px-2 py-0.5 rounded font-mono"
+                style="background: rgba(168,85,247,0.08); color: #a855f7;">Graphics</span>
+            </div>
+            <h3 class="font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors"
+              style="color: var(--text-primary);">Real-Time Ray Marching on the GPU: A Practical Guide</h3>
+            <p class="text-sm flex-1 mb-4" style="color: rgba(226,232,240,0.5);">Building a signed distance field
+              renderer in GLSL with soft shadows, ambient occlusion, and infinite procedural terrain.</p>
+            <div class="blog-line h-0.5 rounded" style="background: #a855f7;"></div>
+          </a>
+        </div>
+      </div>
+    </section><!-- CONTACT -->
+    <section id="contact" class="section-hidden px-6 py-24">
+      <div class="max-w-3xl mx-auto">
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a> <span>/</span> <span
+            class="breadcrumb-current">contact</span>
+        </div>
+        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
+            style="color: var(--accent);">03.</span>
+          <h2 id="contact-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
+            style="color: var(--text-primary);">Get In Touch</h2>
+          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="glass-card rounded-xl p-6">
+            <form id="contact-form" class="flex flex-col gap-4">
+              <div><label for="contact-name" class="font-mono text-xs mb-1 block"
+                  style="color: rgba(226,232,240,0.6);">Name</label> <input type="text" id="contact-name"
+                  placeholder="Your name" required
+                  class="w-full px-4 py-3 rounded-lg font-mono text-sm outline-none focus:ring-2 transition-all"
+                  style="background: rgba(10,14,23,0.8); border: 1px solid rgba(0,229,160,0.15); color: var(--text-primary); --tw-ring-color: var(--accent);">
+              </div>
+              <div><label for="contact-email" class="font-mono text-xs mb-1 block"
+                  style="color: rgba(226,232,240,0.6);">Email</label> <input type="email" id="contact-email"
+                  placeholder="you@example.com" required
+                  class="w-full px-4 py-3 rounded-lg font-mono text-sm outline-none focus:ring-2 transition-all"
+                  style="background: rgba(10,14,23,0.8); border: 1px solid rgba(0,229,160,0.15); color: var(--text-primary); --tw-ring-color: var(--accent);">
+              </div>
+              <div><label for="contact-msg" class="font-mono text-xs mb-1 block"
+                  style="color: rgba(226,232,240,0.6);">Message</label> <textarea id="contact-msg" rows="4"
+                  placeholder="What's on your mind?" required
+                  class="w-full px-4 py-3 rounded-lg font-mono text-sm outline-none focus:ring-2 transition-all resize-none"
+                  style="background: rgba(10,14,23,0.8); border: 1px solid rgba(0,229,160,0.15); color: var(--text-primary); --tw-ring-color: var(--accent);"></textarea>
+              </div><button type="submit"
+                class="glow-btn w-full py-3 rounded-lg font-mono text-sm font-semibold transition-all"
+                style="background: var(--accent); color: var(--bg-primary);"> Send Message → </button>
+              <p id="form-feedback" class="font-mono text-xs text-center hidden" style="color: var(--accent);"></p>
+            </form>
+          </div>
+          <div class="flex flex-col gap-4"><a id="link-github" href="https://github.com/yourprofile" target="_blank"
+              rel="noopener noreferrer" class="glass-card rounded-xl p-5 flex items-center gap-4 group">
+              <div class="p-3 rounded-lg transition-colors" style="background: rgba(0,229,160,0.08);">
+                <svg width="22" height="22" fill="currentColor" viewbox="0 0 16 16" style="color: var(--accent);">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <p class="font-mono text-sm font-semibold group-hover:text-[var(--accent)] transition-colors"
+                  style="color: var(--text-primary);">GitHub</p>
+                <p class="font-mono text-xs" style="color: rgba(226,232,240,0.4);">View repositories &amp; contributions
+                </p>
+              </div>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+                class="opacity-40 group-hover:opacity-100 transition-opacity" style="color: var(--accent);">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a> <a id="link-linkedin" href="https://linkedin.com/in/yourprofile" target="_blank"
+              rel="noopener noreferrer" class="glass-card rounded-xl p-5 flex items-center gap-4 group">
+              <div class="p-3 rounded-lg transition-colors" style="background: rgba(59,130,246,0.08);">
+                <svg width="22" height="22" fill="currentColor" viewbox="0 0 24 24"
+                  style="color: var(--accent-secondary);">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <p class="font-mono text-sm font-semibold group-hover:text-[var(--accent-secondary)] transition-colors"
+                  style="color: var(--text-primary);">LinkedIn</p>
+                <p class="font-mono text-xs" style="color: rgba(226,232,240,0.4);">Connect professionally</p>
+              </div>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+                class="opacity-40 group-hover:opacity-100 transition-opacity" style="color: var(--accent-secondary);">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a> <a id="link-resume" href="https://example.com/resume.pdf" target="_blank" rel="noopener noreferrer"
+              class="glass-card rounded-xl p-5 flex items-center gap-4 group">
+              <div class="p-3 rounded-lg transition-colors" style="background: rgba(168,85,247,0.08);">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                  style="color: #a855f7;">
+                  <path
+                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0013.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <p class="font-mono text-sm font-semibold group-hover:text-purple-400 transition-colors"
+                  style="color: var(--text-primary);">Resume</p>
+                <p class="font-mono text-xs" style="color: rgba(226,232,240,0.4);">Download PDF</p>
+              </div>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+                class="opacity-40 group-hover:opacity-100 transition-opacity" style="color: #a855f7;">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a> <a id="link-email" href="mailto:alex@example.com"
+              class="glass-card rounded-xl p-5 flex items-center gap-4 group">
+              <div class="p-3 rounded-lg transition-colors" style="background: rgba(251,191,36,0.08);">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                  style="color: #fbbf24;">
+                  <path
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <p class="font-mono text-sm font-semibold group-hover:text-yellow-400 transition-colors"
+                  style="color: var(--text-primary);">Email</p>
+                <p id="email-display" class="font-mono text-xs" style="color: rgba(226,232,240,0.4);">alex@example.com
+                </p>
+              </div>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+                class="opacity-40 group-hover:opacity-100 transition-opacity" style="color: #fbbf24;">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section><!-- FOOTER -->
+    <footer class="px-6 py-8" style="border-top: 1px solid rgba(0,229,160,0.06);">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="font-mono text-xs" style="color: rgba(226,232,240,0.3);">Designed &amp; built with ☕ and curiosity</p>
+        <p class="font-mono text-xs" style="color: rgba(226,232,240,0.3);">© 2024 <span id="footer-name">Alex
+            Chen</span></p>
+      </div>
+    </footer>
+    <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

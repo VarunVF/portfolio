@@ -1,0 +1,237 @@
+html { height: 100%; }
+body { height: 100%; margin: 0; }
+
+:root {
+    --bg-primary: #0a0e17;
+    --surface: #111827;
+    --text-primary: #e2e8f0;
+    --accent: #00e5a0;
+    --accent-secondary: #3b82f6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+
+/* Animated binary background */
+.binary-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    background-color: #0a0e17;
+}
+
+@keyframes scrollBinary {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); } /* Only move up by half (one full layer) */
+}
+
+/* Container for the two layers */
+.binary-content {
+    display: flex;
+    flex-direction: column;
+    animation: scrollBinary 30s linear infinite;
+}
+
+.binary-bg div {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    line-height: 1.2;
+    white-space: pre; /* Essential to keep width consistent */
+    color: var(--accent);
+    opacity: 0.4;
+}
+
+
+/* Terminal cursor blink */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.cursor-blink {
+    animation: blink 0.8s step-end infinite;
+}
+
+/* Glassmorphism card */
+.glass-card {
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 229, 160, 0.1);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card:hover {
+    border-color: rgba(0, 229, 160, 0.35);
+    box-shadow: 0 0 30px rgba(0, 229, 160, 0.08), inset 0 0 30px rgba(0, 229, 160, 0.03);
+    transform: translateY(-3px);
+}
+
+/* Glow button */
+.glow-btn {
+    position: relative;
+    transition: all 0.3s ease;
+}
+.glow-btn:hover {
+    box-shadow: 0 0 20px rgba(0, 229, 160, 0.4), 0 0 40px rgba(0, 229, 160, 0.15);
+}
+.glow-btn-secondary:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.15);
+}
+
+/* Staggered reveal */
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+    opacity: 0;
+    animation: fadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.reveal-d1 { animation-delay: 0.1s; }
+.reveal-d2 { animation-delay: 0.25s; }
+.reveal-d3 { animation-delay: 0.4s; }
+.reveal-d4 { animation-delay: 0.55s; }
+.reveal-d5 { animation-delay: 0.7s; }
+
+/* Grid pattern background */
+.grid-bg {
+    background-image:
+    linear-gradient(rgba(0, 229, 160, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 160, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+.breadcrumb a {
+    color: var(--accent);
+    opacity: 0.6;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+.breadcrumb a:hover {
+    opacity: 1;
+}
+.breadcrumb span {
+    color: rgba(226, 232, 240, 0.3);
+    margin: 0 6px;
+}
+.breadcrumb-current {
+    color: rgba(226, 232, 240, 0.7);
+}
+
+/* Vim-style code buffer */
+.vim-buffer {
+    background: rgba(17, 24, 39, 0.4);
+    border: 1px solid rgba(0, 229, 160, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.vim-header {
+    border-bottom: 1px solid rgba(0, 229, 160, 0.08);
+    padding: 8px 16px;
+    background: rgba(10, 14, 23, 0.6);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(226, 232, 240, 0.5);
+}
+.vim-content-wrapper {
+    display: flex;
+    overflow: hidden;
+}
+.vim-gutter {
+    background: rgba(10, 14, 23, 0.6);
+    padding: 20px 16px;
+    text-align: right;
+    border-right: 1px solid rgba(0, 229, 160, 0.08);
+    min-width: fit-content;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(0, 229, 160, 0.25);
+    user-select: none;
+}
+.vim-content {
+    flex: 1;
+    padding: 20px 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(226, 232, 240, 0.8);
+    overflow-x: auto;
+}
+.vim-content p {
+    margin: 0;
+}
+.vim-status {
+    border-top: 1px solid rgba(0, 229, 160, 0.08);
+    padding: 8px 24px;
+    background: rgba(10, 14, 23, 0.4);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(0, 229, 160, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Skill badge */
+.skill-badge {
+    transition: all 0.25s ease;
+}
+.skill-badge:hover {
+    background: rgba(0, 229, 160, 0.15);
+    border-color: rgba(0, 229, 160, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Section fade-in on scroll */
+.section-hidden { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.section-visible { opacity: 1; transform: translateY(0); }
+
+/* Nav link underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* Blog card hover line */
+.blog-line {
+    width: 0;
+    transition: width 0.4s ease;
+}
+.blog-card:hover .blog-line {
+    width: 100%;
+}
+
+/* Toast */
+@keyframes toastIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes toastOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(16px); }
+}
+.toast-enter { animation: toastIn 0.3s ease forwards; }
+.toast-exit { animation: toastOut 0.3s ease forwards; }
+body { box-sizing: border-box; }
