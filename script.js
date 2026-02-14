@@ -47,7 +47,6 @@ refreshBackground();
 window.addEventListener('resize', () => {
     /* Refresh background on phone rotate or window resize */
     refreshBackground();
-    console.log(`New size: ${window.innerWidth}x${window.innerHeight}`);
 })
 
 

@@ -45,7 +45,7 @@ body { height: 100%; margin: 0; }
     line-height: 1.2;
     white-space: pre; /* Essential to keep width consistent */
     color: var(--accent);
-    opacity: 0.4;
+    opacity: 0.35;
 }
 
 
