@@ -1,4 +1,4 @@
-/* Binary background */
+// Binary background
 function generateBinary(len) {
     return Array.from({ length: len }, () => Math.random() > 0.5 ? '1' : '0').join('') + ' ';
 }
@@ -13,11 +13,11 @@ function calculateWindowSizeInChars() {
     tester.style.visibility = 'hidden';
     tester.textContent = '0'; // Monospace: all chars are same width
     document.body.appendChild(tester);
-    
+
     const charWidth = tester.getBoundingClientRect().width;
     const charHeight = tester.getBoundingClientRect().height;
     document.body.removeChild(tester);
-    
+
     // Total width / width of one char + 10% buffer for safety
     const widthInChars = Math.ceil((window.innerWidth / charWidth) * 1.1);
     const heightInChars = Math.ceil((window.innerHeight / charHeight) * 1.1);
@@ -44,13 +44,42 @@ function refreshBackground() {
 }
 refreshBackground();
 
-window.addEventListener('resize', () => {
-    /* Refresh background on phone rotate or window resize */
-    refreshBackground();
-})
+window.addEventListener('resize', refreshBackground);
 
 
-/* Typing animation */
+// vim buffer logic
+const vimBufferContent = document.querySelector('div.vim-content');
+
+
+function refreshVimGutter() {
+    function getVisualLineCount(element) {
+        const style = window.getComputedStyle(element);
+        const height = element.getBoundingClientRect().height;
+        const lineHeight = parseFloat(style.lineHeight);
+
+        return Math.round(height / lineHeight);
+    }
+
+    const gutter = document.querySelector('div.vim-gutter');
+    if (!vimBufferContent || !gutter) return;
+
+    gutter.innerHTML = '';  // Clear the gutter
+    const gutterLines = getVisualLineCount(vimBufferContent);
+    const maxPadding = String(gutterLines).length;
+    for (let i = 0; i < gutterLines; i++) {
+        const paddedLine = String(i).padStart(maxPadding, '0');
+        gutter.innerHTML += paddedLine + "\n";
+        gutter.appendChild(document.createElement('br'));
+    }
+}
+
+// Initial sync
+refreshVimGutter();
+
+// Sync again on resize because wrapping changes
+window.addEventListener('resize', refreshVimGutter);
+
+// Typing animation
 const typingPhrases = [
     'systems programming in C/C++',
     'training neural networks',
@@ -85,7 +114,7 @@ function typeStep() {
 }
 setTimeout(typeStep, 1200);
 
-/* UI Logic for scroll and menu */
+// UI Logic for scroll and menu
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if (e.isIntersecting) e.target.classList.add('section-visible');
@@ -98,4 +127,4 @@ document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('hidden');
 });
 
-/* TODO handle contact form */
+// TODO handle contact form
