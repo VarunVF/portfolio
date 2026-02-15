@@ -2,6 +2,7 @@ export const links = {
     github: "https://github.com/VarunVF",
     linkedin: "https://www.linkedin.com/in/varun-ravi-878461286/",
     email: "mailto:iyervarunravi@gmail.com",
+    blog: "https://varunvf.github.io/",
     projects: [
         'https://github.com/VarunVF/glgame2d',
         'https://github.com/VarunVF/RayTracing',
