@@ -97,7 +97,7 @@ body {
     background: rgba(17, 24, 39, 0.6);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(0, 229, 160, 0.1);
+    border: 2px solid rgba(0, 229, 160, 0.1);
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -115,6 +115,10 @@ body {
 
 .glow-btn:hover {
     box-shadow: 0 0 20px rgba(0, 229, 160, 0.4), 0 0 40px rgba(0, 229, 160, 0.15);
+}
+
+.glow-btn-secondary {
+    transition: all 0.3s ease;
 }
 
 .glow-btn-secondary:hover {

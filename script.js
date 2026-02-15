@@ -1,3 +1,35 @@
+import { links, typingPhrases } from "./data.js";
+
+
+// Load links into html tags
+function initLinks() {
+    // helper function
+    function initLink(id, value) {
+        const element = document.getElementById(id);
+        if (element && value) {
+            element.href = value;
+        }
+    }
+
+    // social links (direct mapping)
+    const socials = ['github', 'linkedin', 'email'];
+    socials.forEach(platform => {
+        initLink(`link-${platform}`, links[platform]);
+    });
+
+    // projects
+    links.projects.forEach((url, index) => {
+        initLink(`link-project-${index + 1}`, url);
+    });
+
+    // articles
+    links.articles.forEach((url, index) => {
+        initLink(`link-article-${index + 1}`, url);
+    });
+}
+initLinks();
+
+
 // Binary background
 function generateBinary(len) {
     return Array.from({ length: len }, () => Math.random() > 0.5 ? '1' : '0').join('') + ' ';
@@ -50,7 +82,6 @@ window.addEventListener('resize', refreshBackground);
 // vim buffer logic
 const vimBufferContent = document.querySelector('div.vim-content');
 
-
 function refreshVimGutter() {
     function getVisualLineCount(element) {
         const style = window.getComputedStyle(element);
@@ -79,15 +110,8 @@ refreshVimGutter();
 // Sync again on resize because wrapping changes
 window.addEventListener('resize', refreshVimGutter);
 
+
 // Typing animation
-const typingPhrases = [
-    'systems programming in C/C++',
-    'training neural networks',
-    'ray marching on the GPU',
-    'writing memory allocators',
-    'building distributed systems',
-    'optimizing CUDA kernels'
-];
 let phraseIdx = 0, charIdx = 0, isDeleting = false;
 const typingTarget = document.getElementById('typing-target');
 
@@ -114,6 +138,7 @@ function typeStep() {
 }
 setTimeout(typeStep, 1200);
 
+
 // UI Logic for scroll and menu
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -127,4 +152,24 @@ document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('hidden');
 });
 
-// TODO handle contact form
+
+// Email address copying
+document.getElementById('link-email').addEventListener('click', () => {
+    const display = document.getElementById('email-display');
+    const oldDisplayText = display.textContent;
+    const oldDisplayColor = display.style.color;
+
+    // remove "mailto:" before writing to clipboard
+    const email = links.email.replace("mailto:", "");
+    navigator.clipboard.writeText(email).then(() => {
+        // Visual feedback
+        display.style.color = '#00e5a0';
+        display.textContent = ' [Copied!]';
+
+        // Reset after 2 seconds
+        setTimeout(() => {
+            display.style.color = oldDisplayColor;
+            display.textContent = oldDisplayText;
+        }, 2000);
+    });
+});
