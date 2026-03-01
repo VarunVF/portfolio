@@ -7,7 +7,7 @@ export const links = {
         'https://github.com/VarunVF/glgame2d',
         'https://github.com/VarunVF/RayTracing',
         'https://github.com/VarunVF/shader',
-        'https://github.com/VarunVF/mathfp',
+        'https://github.com/VarunVF/mathfp-rs',
     ],
     articles: [
         'https://varunvf.github.io/myOS.html',
