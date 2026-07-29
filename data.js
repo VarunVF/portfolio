@@ -1,6 +1,7 @@
 export const links = {
     github: "https://github.com/VarunVF",
     linkedin: "https://www.linkedin.com/in/varun-ravi-878461286/",
+    itchio: "https://varunvf.itch.io/",
     email: "mailto:iyervarunravi@gmail.com",
     blog: "https://varunvf.github.io/",
     projects: [

@@ -24,13 +24,15 @@
     <!-- NAV -->
     <header class="fixed top-0 left-0 w-full z-50"
       style="background: rgba(10, 14, 23, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 229, 160, 0.08);">
-      <nav class="px-6 py-4 flex justify-between"><a href="#hero"
-          class="font-mono font-bold text-lg" style="color: var(--accent);" id="nav-logo">varun</a>
+      <nav class="px-6 py-4 flex justify-between"><a href="#hero" class="font-mono font-bold text-lg"
+          style="color: var(--accent);" id="nav-logo">varun</a>
         <div class="hidden md:flex items-center gap-8"><a href="#about"
             class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
             style="color: var(--text-primary);">about</a> <a href="#projects"
             class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
-            style="color: var(--text-primary);">projects</a> <a href="#skills"
+            style="color: var(--text-primary);">projects</a> <a href="#games"
+            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
+            style="color: var(--text-primary);">games</a> <a href="#skills"
             class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
             style="color: var(--text-primary);">skills</a> <a href="#blog"
             class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
@@ -47,6 +49,8 @@
           style="color: var(--text-primary);">about</a>
         <a href="#projects" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
           style="color: var(--text-primary);">projects</a>
+        <a href="#games" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
+          style="color: var(--text-primary);">games</a>
         <a href="#skills" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
           style="color: var(--text-primary);">skills</a>
         <a href="#blog" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
@@ -238,13 +242,56 @@
           </div>
         </div>
       </div>
+    </section><!-- GAMES -->
+    <section id="games" class="section-hidden">
+      <div class="max-w-6xl mx-auto">
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/games</span>
+        </div>
+        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
+            style="color: var(--accent);">02.</span>
+          <h2 id="skills-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
+            style="color: var(--text-primary);">Games</h2>
+          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="glass-card rounded-xl p-6 flex justify-center">
+            <div class="flex flex-col gap-y-4">
+              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Samsara Tiles</h3>
+              <iframe src="https://itch.io/embed/3784222?dark=true" frameborder="0"><a
+                  href="https://varunvf.itch.io/samsara-tiles">Samsara Tiles by varunvf</a></iframe>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-6 flex justify-center">
+            <div class="flex flex-col gap-y-4">
+              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Maze Runner</h3>
+              <iframe src="https://itch.io/embed/4454051?dark=true" frameborder="0"><a
+                  href="https://varunvf.itch.io/maze-runner">Maze Runner by varunvf</a></iframe>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-6 flex justify-center">
+            <div class="flex flex-col gap-y-4">
+              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Graph It!</h3>
+              <iframe src="https://itch.io/embed/3511149?dark=true" frameborder="0"><a
+                  href="https://varunvf.itch.io/graph-it">Graph It! by varunvf</a></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 text-center"><!-- View itch.io Profile-->
+          <a href="#" id="link-itchio" target="_blank"
+            class="glow-btn inline-flex items-center gap-2 px-8 py-3 rounded-lg font-mono text-sm font-semibold transition-all duration-300"
+            style="border: 1px solid var(--accent); color: var(--accent); background: transparent;">
+            View itch.io Profile
+            <img src="icons/rarrow.svg" width="16" height="16" />
+          </a>
+        </div>
+      </div>
     </section><!-- SKILLS -->
     <section id="skills" class="section-hidden">
       <div class="max-w-6xl mx-auto">
         <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/skills</span>
         </div>
         <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
-            style="color: var(--accent);">02.</span>
+            style="color: var(--accent);">03.</span>
           <h2 id="skills-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
             style="color: var(--text-primary);">Tech Stack</h2>
           <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
@@ -271,6 +318,8 @@
                 style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">JavaScript</span>
               <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
                 style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">TypeScript</span>
+              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
+                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">Godot</span>
               <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
                 style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">GLSL</span>
               <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
@@ -324,7 +373,7 @@
         <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/blog</span>
         </div>
         <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
-            style="color: var(--accent);">03.</span>
+            style="color: var(--accent);">04.</span>
           <h2 id="blog-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
             style="color: var(--text-primary);">
             Latest Articles</h2>
@@ -387,7 +436,7 @@
         <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/contact</span>
         </div>
         <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
-            style="color: var(--accent);">04.</span>
+            style="color: var(--accent);">05.</span>
           <h2 id="contact-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
             style="color: var(--text-primary);">Get In Touch</h2>
           <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
