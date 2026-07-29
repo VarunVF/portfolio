@@ -24,7 +24,7 @@
     <!-- NAV -->
     <header class="fixed top-0 left-0 w-full z-50"
       style="background: rgba(10, 14, 23, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 229, 160, 0.08);">
-      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#hero"
+      <nav class="px-6 py-4 flex justify-between"><a href="#hero"
           class="font-mono font-bold text-lg" style="color: var(--accent);" id="nav-logo">varun</a>
         <div class="hidden md:flex items-center gap-8"><a href="#about"
             class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
@@ -55,18 +55,12 @@
           style="color: var(--text-primary);">contact</a>
       </div>
     </header><!-- HERO -->
-    <section id="hero" class="grid-bg relative flex items-center justify-center px-6"
-      style="min-height: 100%; padding-top: 80px;">
+    <section id="hero" class="relative flex items-center justify-center" style="min-height: 100%; padding-top: 80px;">
       <div class="absolute top-1/4 left-1/4 w-72 h-72 rounded-full opacity-20 blur-3xl pointer-events-none"
         style="background: radial-gradient(circle, rgba(0,229,160,0.3), transparent 70%);"></div>
       <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-15 blur-3xl pointer-events-none"
         style="background: radial-gradient(circle, rgba(59,130,246,0.3), transparent 70%);"></div>
       <div class="max-w-3xl text-center relative z-10">
-        <div class="reveal reveal-d1 inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 font-mono text-xs"
-          style="background: rgba(0, 229, 160, 0.08); border: 1px solid rgba(0, 229, 160, 0.2); color: var(--accent);">
-          <span class="w-2 h-2 rounded-full" style="background: var(--accent);"></span> <span>available for
-            opportunities</span>
-        </div>
         <h1 class="reveal reveal-d2 font-mono font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-4"
           style="color: var(--text-primary);"><span style="color: var(--accent);">&gt; </span><span
             id="hero-name-text">Varun Ravi</span></h1>
@@ -87,10 +81,9 @@
         </div>
       </div>
     </section><!-- ABOUT / INTRO -->
-    <section id="about" class="section-hidden px-6 py-24" style="border-top: 1px solid rgba(0,229,160,0.08);">
+    <section id="about" class="section-hidden">
       <div class="max-w-4xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a> <span>/</span> <span
-            class="breadcrumb-current">about.txt</span>
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/about.txt</span>
         </div>
         <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
             style="color: var(--accent);">00.</span>
@@ -117,10 +110,9 @@
         </div>
       </div>
     </section><!-- PROJECTS -->
-    <section id="projects" class="section-hidden px-6 py-24">
+    <section id="projects" class="section-hidden">
       <div class="max-w-6xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a> <span>/</span> <span
-            class="breadcrumb-current">projects</span>
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/projects</span>
         </div>
         <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
             style="color: var(--accent);">01.</span>
@@ -133,8 +125,7 @@
             <div class="flex items-start justify-between mb-4">
               <div class="p-3 rounded-lg" style="background: rgba(0, 229, 160, 0.1);">
                 <img src="icons/cpu.svg" width="24" height="24" />
-              </div><span class="font-mono text-xs px-2 py-1 rounded"
-                style="background: rgba(0,229,160,0.1); color: var(--accent);">⭐ Featured</span>
+              </div>
             </div>
             <h3 class="font-mono font-semibold text-lg mb-2" style="color: var(--text-primary);">2D Game Dev Library
             </h3>
@@ -222,13 +213,12 @@
             <div class="flex items-start justify-between mb-4">
               <div class="p-3 rounded-lg" style="background: rgba(251,191,36,0.1);">
                 <img src="icons/bulb.svg" width="24" height="24" />
-              </div><span class="font-mono text-xs px-2 py-1 rounded"
-                style="background: rgba(251,191,36,0.1); color: #fbbf24;">🚧 In Progress</span>
+              </div>
             </div>
             <h3 class="font-mono font-semibold text-lg mb-2" style="color: var(--text-primary);">MathFP</h3>
             <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">A functional, math-oriented
               scripting language for modeling mathematical functions. Features a custom lexer, parser, AST-based
-              interpreter, immutable values and first-class functions.</p>
+              interpreter, and first-class functions. Basic editor support is available for VSCode.</p>
             <div class="flex flex-wrap gap-2 mb-5"><span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
                 style="background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.15); color: #fbbf24;">Rust</span>
               <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
@@ -249,10 +239,9 @@
         </div>
       </div>
     </section><!-- SKILLS -->
-    <section id="skills" class="section-hidden px-6 py-24">
+    <section id="skills" class="section-hidden">
       <div class="max-w-6xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a> <span>/</span> <span
-            class="breadcrumb-current">skills</span>
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/skills</span>
         </div>
         <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
             style="color: var(--accent);">02.</span>
@@ -330,10 +319,9 @@
         </div>
       </div>
     </section><!-- BLOG -->
-    <section id="blog" class="section-hidden px-6 py-24">
+    <section id="blog" class="section-hidden">
       <div class="max-w-6xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a> <span>/</span> <span
-            class="breadcrumb-current">blog</span>
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/blog</span>
         </div>
         <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
             style="color: var(--accent);">03.</span>
@@ -394,10 +382,9 @@
         </div>
       </div>
     </section><!-- CONTACT -->
-    <section id="contact" class="section-hidden px-6 py-24">
+    <section id="contact" class="section-hidden">
       <div class="max-w-3xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a> <span>/</span> <span
-            class="breadcrumb-current">contact</span>
+        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/contact</span>
         </div>
         <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
             style="color: var(--accent);">04.</span>

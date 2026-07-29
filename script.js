@@ -39,7 +39,7 @@ function calculateWindowSizeInChars() {
     const tester = document.createElement('span');
     // Copy the style of the binary bg
     tester.style.fontFamily = '"JetBrains Mono", monospace';
-    tester.style.fontSize = '11px';
+    tester.style.fontSize = '16px';
     tester.style.lineHeight = '1.2';
     tester.style.position = 'absolute';
     tester.style.visibility = 'hidden';

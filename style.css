@@ -66,7 +66,7 @@ body {
 
 .binary-bg div {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 16px;
     line-height: 1.2;
     white-space: pre;
     /* Essential to keep width consistent */
@@ -163,18 +163,10 @@ body {
     animation-delay: 0.7s;
 }
 
-/* Grid pattern background */
-.grid-bg {
-    background-image:
-        linear-gradient(rgba(0, 229, 160, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 229, 160, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-}
-
 /* Breadcrumb */
 .breadcrumb {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 16px;
 }
 
@@ -190,8 +182,8 @@ body {
 }
 
 .breadcrumb span {
-    color: rgba(226, 232, 240, 0.3);
-    margin: 0 6px;
+    color: rgba(226, 232, 240, 0.55);
+    margin: 0;
 }
 
 .breadcrumb-current {
@@ -257,6 +249,10 @@ body {
     background: rgba(0, 229, 160, 0.15);
     border-color: rgba(0, 229, 160, 0.4);
     transform: translateY(-2px);
+}
+
+section {
+    padding: 4rem 1.5rem;
 }
 
 /* Section fade-in on scroll */
