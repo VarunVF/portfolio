@@ -24,7 +24,7 @@ body {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/jetbrains-mono-v24-latin-regular.woff2') format('woff2');
+  src: url('./fonts/jetbrains-mono-v24-latin-regular.woff2') format('woff2');
 }
 
 /* dm-sans-regular - latin */
@@ -33,7 +33,7 @@ body {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/dm-sans-v17-latin-regular.woff2') format('woff2');
+  src: url('./fonts/dm-sans-v17-latin-regular.woff2') format('woff2');
 }
 
 .detail-font {
