@@ -18,6 +18,28 @@ body {
     --accent-secondary: #3b82f6;
 }
 
+/* jetbrains-mono-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/jetbrains-mono-v24-latin-regular.woff2') format('woff2');
+}
+
+/* dm-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/dm-sans-v17-latin-regular.woff2') format('woff2');
+}
+
+.detail-font {
+    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
