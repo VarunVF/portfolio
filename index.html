@@ -15,11 +15,10 @@
       <div id="binary-layer-2"></div>
     </div>
   </div>
-  <div id="app-root" class="w-full h-full overflow-auto font-sans relative z-10" style="color: var(--text-primary);">
+  <div id="app-root" class="w-full h-full overflow-auto detail-font relative z-10" style="color: var(--text-primary);">
     <!-- NAV -->
-    <header class="fixed top-0 left-0 w-full z-50"
-      style="background: rgba(10, 14, 23, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 229, 160, 0.08);">
-      <nav class="px-6 py-4 flex justify-between"><a href="#hero" class="font-mono font-bold text-lg"
+    <header class="fixed top-bar top-0 left-0 w-full z-50">
+      <nav class="px-6 py-4 flex justify-between items-center"><a href="#hero" class="font-mono font-bold text-lg"
           style="color: var(--accent);" id="nav-logo">varun</a>
         <div class="hidden md:flex items-center gap-8"><a href="#about"
             class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
@@ -133,14 +132,10 @@
               Map Editor.
             </p>
             <div class="flex flex-wrap gap-2 mb-5">
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); color: var(--accent);">C++</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); color: var(--accent);">OpenGL</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); color: var(--accent);">GLSL</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); color: var(--accent);">Tiled</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1 rounded-full">C++</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1 rounded-full">OpenGL</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1 rounded-full">GLSL</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1 rounded-full">Tiled</span>
             </div>
             <div class="flex gap-3">
               <a id="link-project-1" href="#" target="_blank" rel="noopener noreferrer"
@@ -161,16 +156,10 @@
               photorealistic rendering. Simulates physical effects like reflection, refraction and total internal
               reflection.</p>
             <div class="flex flex-wrap gap-2 mb-5">
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.15); color: var(--accent-secondary);">C++</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.15); color: var(--accent-secondary);">Ray
-                Tracing</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.15); color: var(--accent-secondary);">Multithreading</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.15); color: var(--accent-secondary);">Linear
-                Algebra</span>
+              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1 rounded-full">C++</span>
+              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1 rounded-full">Ray Tracing</span>
+              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1 rounded-full">Multithreading</span>
+              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1 rounded-full">Linear Algebra</span>
             </div>
             <div class="flex gap-3">
               <a id="link-project-2" href="#" target="_blank" rel="noopener noreferrer"
@@ -190,13 +179,9 @@
             <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">Modified existing rendering pipelines
               to introduce custom post-processing effects and a day/night lighting system.
             <div class="flex flex-wrap gap-2 mb-5">
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.15); color: #a855f7;">GLSL</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.15); color: #a855f7;">Shaders</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.15); color: #a855f7;">Game
-                Modding</span>
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">GLSL</span>
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">Shaders</span>
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">Game Modding</span>
             </div>
             <div class="flex gap-3">
               <a id="link-project-3" href="#" target="_blank" rel="noopener noreferrer"
@@ -218,12 +203,10 @@
             <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">A functional, math-oriented
               scripting language for modeling mathematical functions. Features a custom lexer, parser, AST-based
               interpreter, and first-class functions. Basic editor support is available for VSCode.</p>
-            <div class="flex flex-wrap gap-2 mb-5"><span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.15); color: #fbbf24;">Rust</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.15); color: #fbbf24;">Interpreters</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1 rounded-full"
-                style="background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.15); color: #fbbf24;">Functional</span>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Rust</span>
+              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Interpreters</span>
+              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Functional</span>
             </div>
             <div class="flex gap-3">
               <a id="link-project-4" href="#" target="_blank" rel="noopener noreferrer"
@@ -252,21 +235,21 @@
           <div class="glass-card rounded-xl p-6 flex justify-center">
             <div class="flex flex-col gap-y-4">
               <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Samsara Tiles</h3>
-              <iframe src="https://itch.io/embed/3784222?dark=true" frameborder="0"><a
+              <iframe src="https://itch.io/embed/3784222?dark=true" frameborder="0" loading="lazy"><a
                   href="https://varunvf.itch.io/samsara-tiles">Samsara Tiles by varunvf</a></iframe>
             </div>
           </div>
           <div class="glass-card rounded-xl p-6 flex justify-center">
             <div class="flex flex-col gap-y-4">
               <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Maze Runner</h3>
-              <iframe src="https://itch.io/embed/4454051?dark=true" frameborder="0"><a
+              <iframe src="https://itch.io/embed/4454051?dark=true" frameborder="0" loading="lazy"><a
                   href="https://varunvf.itch.io/maze-runner">Maze Runner by varunvf</a></iframe>
             </div>
           </div>
           <div class="glass-card rounded-xl p-6 flex justify-center">
             <div class="flex flex-col gap-y-4">
               <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Graph It!</h3>
-              <iframe src="https://itch.io/embed/3511149?dark=true" frameborder="0"><a
+              <iframe src="https://itch.io/embed/3511149?dark=true" frameborder="0" loading="lazy"><a
                   href="https://varunvf.itch.io/graph-it">Graph It! by varunvf</a></iframe>
             </div>
           </div>
@@ -299,27 +282,17 @@
               </div>
               <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Languages &amp; Systems</h3>
             </div>
-            <div class="flex flex-wrap gap-2"><span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">C
-                / C++</span> <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">Python</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">Java</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">SQL</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">Rust</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">JavaScript</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">TypeScript</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">Godot</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">GLSL</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(0,229,160,0.12); color: var(--text-primary);">x86
-                ASM</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">C / C++</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Python</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Java</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">SQL</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Rust</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">JavaScript</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">TypeScript</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Godot</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">GLSL</span>
+              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">x86 ASM</span>
             </div>
           </div>
           <div class="glass-card rounded-xl p-6">
@@ -329,16 +302,12 @@
               </div>
               <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Frameworks &amp; AI/ML</h3>
             </div>
-            <div class="flex flex-wrap gap-2"><span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">scikit-learn</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">React</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">Vue.js</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">node.js</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(59,130,246,0.12); color: var(--text-primary);">OpenGL</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">scikit-learn</span>
+              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">React</span>
+              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Vue.js</span>
+              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">node.js</span>
+              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">OpenGL</span>
             </div>
           </div>
           <div class="glass-card rounded-xl p-6">
@@ -348,16 +317,12 @@
               </div>
               <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Tools &amp; DevOps</h3>
             </div>
-            <div class="flex flex-wrap gap-2"><span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">Git</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">Linux</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">GDB</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">CMake</span>
-              <span class="skill-badge text-xs font-mono px-3 py-1.5 rounded-lg"
-                style="background: rgba(17,24,39,0.8); border: 1px solid rgba(168,85,247,0.12); color: var(--text-primary);">CI/CD</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Git</span>
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Linux</span>
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">GDB</span>
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">CMake</span>
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">CI/CD</span>
             </div>
           </div>
         </div>
@@ -446,7 +411,7 @@
               <div class="flex-1">
                 <p class="font-mono text-sm font-semibold group-hover:text-[var(--accent)] transition-colors"
                   style="color: var(--text-primary);">GitHub</p>
-                <p class="font-mono text-xs" style="color: rgba(226,232,240,0.4);">View repositories &amp; contributions
+                <p style="color: rgba(226,232,240,0.4);">View repositories &amp; contributions
                 </p>
               </div>
               <img src="icons/green_arrow.svg" width="16" height="16"
@@ -459,7 +424,7 @@
               <div class="flex-1">
                 <p class="font-mono text-sm font-semibold group-hover:text-[var(--accent-secondary)] transition-colors"
                   style="color: var(--text-primary);">LinkedIn</p>
-                <p class="font-mono text-xs" style="color: rgba(226,232,240,0.4);">Connect professionally</p>
+                <p style="color: rgba(226,232,240,0.4);">Connect professionally</p>
               </div>
               <img src="icons/blue_arrow.svg" width="16" height="16"
                 class="opacity-40 group-hover:opacity-100 transition-opacity" />
@@ -470,7 +435,7 @@
               <div class="flex-1">
                 <p class="font-mono text-sm font-semibold group-hover:text-yellow-400 transition-colors"
                   style="color: var(--text-primary);">Email</p>
-                <p id="email-display" class="font-mono text-xs" style="color: rgba(226,232,240,0.4);">
+                <p id="email-display" style="color: rgba(226,232,240,0.4);">
                   Open email / copy address
                 </p>
               </div>
@@ -481,13 +446,10 @@
         </div>
       </div>
     </section><!-- FOOTER -->
-    <footer class="px-6 py-8" style="border-top: 1px solid rgba(0,229,160,0.06);">
-      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p class="font-mono text-xs" style="color: rgba(226,232,240,0.3);">Built with coffee and curiosity</p>
-        <p class="font-mono text-xs" style="color: rgba(226,232,240,0.3);">© 2026 Varun Ravi</p>
-      </div>
+    <footer class="bottom-bar px-6 py-6 flex flex-col sm:flex-row items-center justify-between">
+      <p class="font-mono text-xs" style="color: rgba(226,232,240,0.3);">Built with coffee and curiosity</p>
+      <p class="font-mono text-xs" style="color: rgba(226,232,240,0.3);">© 2026 Varun Ravi</p>
     </footer>
-    <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2"></div>
   </div>
   <script type="module" src="script.js"></script>
 </body>
