@@ -30,6 +30,19 @@ function initLinks() {
 initLinks();
 
 
+const images = document.querySelectorAll('img');
+images.forEach(img => {
+  const altText = img.getAttribute('alt');
+  if (altText) {
+    const caption = document.createElement('p');
+    caption.textContent = `Alt: ${altText}`;
+    caption.style.fontSize = '12px';
+    caption.style.color = '#666';
+    img.after(caption);
+  }
+});
+
+
 // Binary background
 function generateBinary(len) {
     return Array.from({ length: len }, () => Math.random() > 0.5 ? '1' : '0').join('') + ' ';
