@@ -18,42 +18,35 @@
       <div id="binary-layer-2"></div>
     </div>
   </div>
-  <div id="app-root" class="w-full h-full overflow-auto detail-font relative z-10" style="color: var(--text-primary);">
+  <div id="app-root" class="primary-text-col w-full h-full overflow-auto detail-font relative z-10">
     <!-- NAV -->
     <header class="fixed top-bar top-0 left-0 w-full z-50">
-      <nav class="px-6 py-4 flex justify-between items-center"><a href="#hero" class="font-mono font-bold text-lg"
-          style="color: var(--accent);" id="nav-logo">varun</a>
+      <nav class="px-6 py-4 flex justify-between items-center"><a href="#hero"
+          class="accent-col font-mono font-bold text-lg" id="nav-logo">varun</a>
         <div class="hidden md:flex items-center gap-8"><a href="#about"
-            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
-            style="color: var(--text-primary);">about</a> <a href="#projects"
-            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
-            style="color: var(--text-primary);">projects</a> <a href="#games"
-            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
-            style="color: var(--text-primary);">games</a> <a href="#skills"
-            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
-            style="color: var(--text-primary);">skills</a> <a href="#blog"
-            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
-            style="color: var(--text-primary);">blog</a> <a href="#contact"
-            class="nav-link relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity"
-            style="color: var(--text-primary);">contact</a>
-        </div><button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu"
-          style="color: var(--accent); cursor: pointer">
+            class="nav-link primary-text-col relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity">about</a>
+          <a href="#projects"
+            class="nav-link primary-text-col relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity">projects</a>
+          <a href="#games"
+            class="nav-link primary-text-col relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity">games</a>
+          <a href="#skills"
+            class="nav-link primary-text-col relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity">skills</a>
+          <a href="#blog"
+            class="nav-link primary-text-col relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity">blog</a>
+          <a href="#contact"
+            class="nav-link primary-text-col relative font-mono text-sm tracking-wide opacity-70 hover:opacity-100 transition-opacity">contact</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu" style="cursor: pointer">
           <img src="icons/menu.svg" alt="" width="24" height="24" />
         </button>
       </nav>
       <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-3">
-        <a href="#about" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
-          style="color: var(--text-primary);">about</a>
-        <a href="#projects" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
-          style="color: var(--text-primary);">projects</a>
-        <a href="#games" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
-          style="color: var(--text-primary);">games</a>
-        <a href="#skills" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
-          style="color: var(--text-primary);">skills</a>
-        <a href="#blog" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
-          style="color: var(--text-primary);">blog</a>
-        <a href="#contact" class="font-mono text-sm py-2 opacity-70 hover:opacity-100"
-          style="color: var(--text-primary);">contact</a>
+        <a href="#about" class="primary-text-col font-mono text-sm py-2 opacity-70 hover:opacity-100">about</a>
+        <a href="#projects" class="primary-text-col font-mono text-sm py-2 opacity-70 hover:opacity-100">projects</a>
+        <a href="#games" class="primary-text-col font-mono text-sm py-2 opacity-70 hover:opacity-100">games</a>
+        <a href="#skills" class="primary-text-col font-mono text-sm py-2 opacity-70 hover:opacity-100">skills</a>
+        <a href="#blog" class="primary-text-col font-mono text-sm py-2 opacity-70 hover:opacity-100">blog</a>
+        <a href="#contact" class="primary-text-col font-mono text-sm py-2 opacity-70 hover:opacity-100">contact</a>
       </div>
     </header><!-- HERO -->
     <section id="hero" class="relative flex items-center justify-center" style="min-height: 100%; padding-top: 80px;">
@@ -62,19 +55,19 @@
       <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-15 blur-3xl pointer-events-none"
         style="background: radial-gradient(circle, rgba(59,130,246,0.3), transparent 70%);"></div>
       <div class="max-w-3xl text-center relative z-10">
-        <h1 class="reveal reveal-d2 font-mono font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-4"
-          style="color: var(--text-primary);"><span style="color: var(--accent);">&gt; </span><span
-            id="hero-name-text">Varun Ravi</span></h1>
+        <h1
+          class="reveal reveal-d2 primary-text-col font-mono font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-4">
+          <span class="accent-col">&gt; </span><span id="hero-name-text">Varun Ravi</span>
+        </h1>
         <div class="reveal reveal-d3 font-mono text-base sm:text-lg md:text-xl mb-6"
           style="color: var(--accent-secondary);"><span id="hero-title-text">Software Developer &amp; CS Student</span>
         </div>
         <div class="reveal reveal-d4 font-mono text-sm sm:text-base mb-10 h-8 flex items-center justify-center"
-          style="color: rgba(226, 232, 240, 0.6);"><span id="typing-target"></span><span class="cursor-blink"
-            style="color: var(--accent);">█</span>
+          style="color: rgba(226, 232, 240, 0.6);"><span id="typing-target"></span><span
+            class="cursor-blink accent-col">█</span>
         </div>
         <div class="reveal reveal-d5 flex flex-wrap gap-4 justify-center"><a href="#projects"
-            class="glow-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-semibold"
-            style="background: var(--accent); color: var(--bg-primary);">
+            class="glow-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-semibold">
             <img src="icons/star.svg" alt="" width="16" height="16" /> View Projects </a> <a href="#contact"
             class="glow-btn-secondary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-semibold"
             style="background: transparent; border: 1px solid var(--accent-secondary); color: var(--accent-secondary);">
@@ -86,11 +79,9 @@
       <div class="max-w-4xl mx-auto">
         <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/about.txt</span>
         </div>
-        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
-            style="color: var(--accent);">00.</span>
-          <h2 id="projects-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
-            style="color: var(--text-primary);">About Me</h2>
-          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">00.</span>
+          <h2 id="projects-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">About Me</h2>
+          <div class="gradient-line flex-1 h-px"></div>
         </div>
         <div class="vim-buffer">
           <div class="vim-content-wrapper">
@@ -115,11 +106,10 @@
       <div class="max-w-6xl mx-auto">
         <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/projects</span>
         </div>
-        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
-            style="color: var(--accent);">01.</span>
-          <h2 id="projects-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
-            style="color: var(--text-primary);">Featured Projects</h2>
-          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">01.</span>
+          <h2 id="projects-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Featured
+            Projects</h2>
+          <div class="gradient-line flex-1 h-px"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projects-grid">
           <div class="glass-card rounded-xl p-6 lg:col-span-2 flex flex-col">
@@ -128,9 +118,9 @@
                 <img src="icons/cpu.svg" alt="" width="24" height="24" />
               </div>
             </div>
-            <h3 class="font-mono font-semibold text-lg mb-2" style="color: var(--text-primary);">2D Game Dev Library
+            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">2D Game Dev Library
             </h3>
-            <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">A 2D game development library built
+            <p class="desc-text text-sm mb-4 flex-1">A 2D game development library built
               in C++ and using the OpenGL rendering API. Supports loading and rendering tilemaps generated using Tiled
               Map Editor.
             </p>
@@ -142,9 +132,7 @@
             </div>
             <div class="flex gap-3">
               <a id="link-project-1" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold"
-                style="background: var(--accent); color: var(--bg-primary);">
-
+                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
                 <img src="icons/github.svg" alt="" width="14" height="14" />
                 GitHub
               </a>
@@ -154,8 +142,8 @@
             <div class="p-3 rounded-lg mb-4 w-fit" style="background: rgba(59,130,246,0.1);">
               <img src="icons/cube.svg" alt="" width="24" height="24" />
             </div>
-            <h3 class="font-mono font-semibold text-lg mb-2" style="color: var(--text-primary);">3D Ray Tracer</h3>
-            <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">Multithreaded 3D ray tracer for
+            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">3D Ray Tracer</h3>
+            <p class="desc-text text-sm mb-4 flex-1">Multithreaded 3D ray tracer for
               photorealistic rendering. Simulates physical effects like reflection, refraction and total internal
               reflection.</p>
             <div class="flex flex-wrap gap-2 mb-5">
@@ -166,9 +154,7 @@
             </div>
             <div class="flex gap-3">
               <a id="link-project-2" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold"
-                style="background: var(--accent); color: var(--bg-primary);">
-
+                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
                 <img src="icons/github.svg" alt="" width="14" height="14" />
                 GitHub
               </a>
@@ -178,8 +164,8 @@
             <div class="p-3 rounded-lg mb-4 w-fit" style="background: rgba(168,85,247,0.1);">
               <img src="icons/terminal.svg" alt="" width="24" height="24" />
             </div>
-            <h3 class="font-mono font-semibold text-lg mb-2" style="color: var(--text-primary);">Minecraft Shader</h3>
-            <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">Modified existing rendering pipelines
+            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">Minecraft Shader</h3>
+            <p class="desc-text text-sm mb-4 flex-1">Modified existing rendering pipelines
               to introduce custom post-processing effects and a day/night lighting system.
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">GLSL</span>
@@ -188,9 +174,7 @@
             </div>
             <div class="flex gap-3">
               <a id="link-project-3" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold"
-                style="background: var(--accent); color: var(--bg-primary);">
-
+                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
                 <img src="icons/github.svg" alt="" width="14" height="14" />
                 GitHub
               </a>
@@ -202,8 +186,8 @@
                 <img src="icons/bulb.svg" alt="" width="24" height="24" />
               </div>
             </div>
-            <h3 class="font-mono font-semibold text-lg mb-2" style="color: var(--text-primary);">MathFP</h3>
-            <p class="text-sm mb-4 flex-1" style="color: rgba(226,232,240,0.6);">A functional, math-oriented
+            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">MathFP</h3>
+            <p class="desc-text text-sm mb-4 flex-1">A functional, math-oriented
               scripting language for modeling mathematical functions. Features a custom lexer, parser, AST-based
               interpreter, and first-class functions. Basic editor support is available for VSCode.</p>
             <div class="flex flex-wrap gap-2 mb-5">
@@ -213,9 +197,7 @@
             </div>
             <div class="flex gap-3">
               <a id="link-project-4" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold"
-                style="background: var(--accent); color: var(--bg-primary);">
-
+                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
                 <img src="icons/github.svg" alt="" width="14" height="14" />
                 GitHub
               </a>
@@ -228,33 +210,33 @@
       <div class="max-w-6xl mx-auto">
         <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/games</span>
         </div>
-        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
-            style="color: var(--accent);">02.</span>
-          <h2 id="skills-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
-            style="color: var(--text-primary);">Games</h2>
-          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">02.</span>
+          <h2 id="skills-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Games</h2>
+          <div class="gradient-line flex-1 h-px"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <a href="https://varunvf.itch.io/samsara-tiles" target="_blank"
             class="glass-card rounded-xl p-6 flex flex-col gap-y-4 justify-between">
-            <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Samsara Tiles</h3>
-            <p style="color: rgba(226,232,240,0.6);">2D Platformer, made in 3 days for GMTK Game Jam 2025</p>
+            <h3 class="primary-text-col font-mono font-semibold">Samsara Tiles</h3>
+            <p class="desc-text">2D Platformer, made in 3 days for GMTK Game Jam 2025</p>
             <div class="flex justify-center">
-              <img src="images/samsara-tiles.png" alt="Image for Samsara Tiles" class="game-preview" width="315" height="250" />
+              <img src="images/samsara-tiles.png" alt="Image for Samsara Tiles" class="game-preview" width="315"
+                height="250" />
             </div>
           </a>
           <a href="https://varunvf.itch.io/maze-runner" target="_blank"
             class="glass-card rounded-xl p-6 flex flex-col gap-y-4 justify-between">
-            <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Maze Runner</h3>
-            <p style="color: rgba(226,232,240,0.6);">Timed 3D maze puzzle</p>
+            <h3 class="primary-text-col font-mono font-semibold">Maze Runner</h3>
+            <p class="desc-text">Timed 3D maze puzzle</p>
             <div class="flex justify-center">
-              <img src="images/maze-runner.png" alt="Image for Maze Runner" class="game-preview" width="315" height="250" />
+              <img src="images/maze-runner.png" alt="Image for Maze Runner" class="game-preview" width="315"
+                height="250" />
             </div>
           </a>
           <a href="https://varunvf.itch.io/graph-it" target="_blank"
             class="glass-card rounded-xl p-6 flex flex-col gap-y-4 justify-between">
-            <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Graph It!</h3>
-            <p style="color: rgba(226,232,240,0.6);">Function graphing game, made in 3 days for Mini Jam #183 (Calculations)</p>
+            <h3 class="primary-text-col font-mono font-semibold">Graph It!</h3>
+            <p class="desc-text">Function graphing game, made in 3 days for Mini Jam #183 (Calculations)</p>
             <div class="flex justify-center">
               <img src="images/graph-it.png" alt="Image for Graph It!" class="game-preview" width="315" height="250" />
             </div>
@@ -262,8 +244,7 @@
         </div>
         <div class="mt-12 text-center"><!-- View itch.io Profile-->
           <a href="#" id="link-itchio" target="_blank"
-            class="glow-btn inline-flex items-center gap-2 px-8 py-3 rounded-lg font-mono text-sm font-semibold transition-all duration-300"
-            style="border: 1px solid var(--accent); color: var(--accent); background: transparent;">
+            class="glow-btn transparent-btn inline-flex items-center gap-2 px-8 py-3 rounded-lg font-mono text-sm font-semibold transition-all duration-300">
             View itch.io Profile
             <img src="icons/rarrow.svg" alt="" width="16" height="16" />
           </a>
@@ -274,11 +255,9 @@
       <div class="max-w-6xl mx-auto">
         <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/skills</span>
         </div>
-        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
-            style="color: var(--accent);">03.</span>
-          <h2 id="skills-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
-            style="color: var(--text-primary);">Tech Stack</h2>
-          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">03.</span>
+          <h2 id="skills-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Tech Stack</h2>
+          <div class="gradient-line flex-1 h-px"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="glass-card rounded-xl p-6">
@@ -286,7 +265,7 @@
               <div class="p-2 rounded-lg" style="background: rgba(0,229,160,0.1);">
                 <img src="icons/code_bracket.svg" alt="" width="20" height="20" />
               </div>
-              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Languages &amp; Systems</h3>
+              <h3 class="primary-text-col font-mono font-semibold">Languages &amp; Systems</h3>
             </div>
             <div class="flex flex-wrap gap-2">
               <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">C / C++</span>
@@ -306,7 +285,7 @@
               <div class="p-2 rounded-lg" style="background: rgba(59,130,246,0.1);">
                 <img src="icons/bolt.svg" alt="" width="20" height="20" />
               </div>
-              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Frameworks &amp; AI/ML</h3>
+              <h3 class="primary-text-col font-mono font-semibold">Frameworks &amp; AI/ML</h3>
             </div>
             <div class="flex flex-wrap gap-2">
               <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">scikit-learn</span>
@@ -321,7 +300,7 @@
               <div class="p-2 rounded-lg" style="background: rgba(168,85,247,0.1);">
                 <img src="icons/wrench_screwdriver.svg" alt="" width="20" height="20" />
               </div>
-              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Tools &amp; DevOps</h3>
+              <h3 class="primary-text-col font-mono font-semibold">Tools &amp; DevOps</h3>
             </div>
             <div class="flex flex-wrap gap-2">
               <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Git</span>
@@ -338,12 +317,10 @@
       <div class="max-w-6xl mx-auto">
         <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/blog</span>
         </div>
-        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
-            style="color: var(--accent);">04.</span>
-          <h2 id="blog-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
-            style="color: var(--text-primary);">
-            Latest Articles</h2>
-          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">04.</span>
+          <h2 id="blog-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Latest Articles
+          </h2>
+          <div class="gradient-line flex-1 h-px"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <a href="#" target="_blank" id="link-article-1" rel="noopener noreferrer"
@@ -352,9 +329,10 @@
               <span class="text-xs px-2 py-0.5 rounded font-mono"
                 style="background: rgba(0,229,160,0.08); color: var(--accent);">Systems</span>
             </div>
-            <h3 class="font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors"
-              style="color: var(--text-primary);">How an Operating System Starts Up</h3>
-            <p class="text-sm flex-1 mb-4" style="color: rgba(226,232,240,0.5);">
+            <h3
+              class="primary-text-col font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
+              How an Operating System Starts Up</h3>
+            <p class="desc-text text-sm flex-1 mb-4">
               We learn about how an operating system is loaded on startup and write a simple bootloader.
             </p>
             <div class="blog-line h-0.5 rounded" style="background: var(--accent);"></div>
@@ -364,9 +342,10 @@
               <span class="text-xs px-2 py-0.5 rounded font-mono"
                 style="background: rgba(59,130,246,0.08); color: var(--accent-secondary);">AI/ML</span>
             </div>
-            <h3 class="font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors"
-              style="color: var(--text-primary);">Removing Outliers for Machine Learning</h3>
-            <p class="text-sm flex-1 mb-4" style="color: rgba(226,232,240,0.5);">
+            <h3
+              class="primary-text-col font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
+              Removing Outliers for Machine Learning</h3>
+            <p class="desc-text text-sm flex-1 mb-4">
               Some routines for cleaning up outliers in training data for machine learning, using the pandas library in
               Python.
             </p>
@@ -377,9 +356,10 @@
               <span class="text-xs px-2 py-0.5 rounded font-mono"
                 style="background: rgba(168,85,247,0.08); color: #a855f7;">Graphics</span>
             </div>
-            <h3 class="font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors"
-              style="color: var(--text-primary);">Writing Minecraft Shaders</h3>
-            <p class="text-sm flex-1 mb-4" style="color: rgba(226,232,240,0.5);">
+            <h3
+              class="primary-text-col font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
+              Writing Minecraft Shaders</h3>
+            <p class="desc-text text-sm flex-1 mb-4">
               My experience learning how to write shaders for Minecraft and several things I learnt about computer
               graphics along the way.
             </p>
@@ -389,8 +369,7 @@
         <!-- View all posts -->
         <div class="mt-12 text-center">
           <a href="#" id="link-blog" target="_blank"
-            class="glow-btn inline-flex items-center gap-2 px-8 py-3 rounded-lg font-mono text-sm font-semibold transition-all duration-300"
-            style="border: 1px solid var(--accent); color: var(--accent); background: transparent;">
+            class="glow-btn transparent-btn inline-flex items-center gap-2 px-8 py-3 rounded-lg font-mono text-sm font-semibold transition-all duration-300">
             View All Articles
             <img src="icons/rarrow.svg" alt="" width="16" height="16" />
           </a>
@@ -401,11 +380,10 @@
       <div class="max-w-3xl mx-auto">
         <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/contact</span>
         </div>
-        <div class="flex items-center gap-4 mb-12"><span class="font-mono text-sm"
-            style="color: var(--accent);">05.</span>
-          <h2 id="contact-heading-text" class="font-mono font-bold text-2xl sm:text-3xl"
-            style="color: var(--text-primary);">Get In Touch</h2>
-          <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
+        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">05.</span>
+          <h2 id="contact-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Get In Touch
+          </h2>
+          <div class="gradient-line flex-1 h-px"></div>
         </div>
         <div class="grid grid-cols-1 gap-8">
           <div class="flex flex-col gap-4">
@@ -415,9 +393,10 @@
                 <img src="icons/github_green.svg" alt="" width="22" height="22" />
               </div>
               <div class="flex-1">
-                <p class="font-mono text-sm font-semibold group-hover:text-[var(--accent)] transition-colors"
-                  style="color: var(--text-primary);">GitHub</p>
-                <p style="color: rgba(226,232,240,0.4);">View repositories &amp; contributions
+                <p
+                  class="primary-text-col font-mono text-sm font-semibold group-hover:text-[var(--accent)] transition-colors">
+                  GitHub</p>
+                <p class="desc-text">View repositories &amp; contributions
                 </p>
               </div>
               <img src="icons/green_arrow.svg" alt="" width="16" height="16"
@@ -428,9 +407,10 @@
                 <img src="icons/linkedin.svg" alt="" width="22" height="22" />
               </div>
               <div class="flex-1">
-                <p class="font-mono text-sm font-semibold group-hover:text-[var(--accent-secondary)] transition-colors"
-                  style="color: var(--text-primary);">LinkedIn</p>
-                <p style="color: rgba(226,232,240,0.4);">Connect professionally</p>
+                <p
+                  class="primary-text-col font-mono text-sm font-semibold group-hover:text-[var(--accent-secondary)] transition-colors">
+                  LinkedIn</p>
+                <p class="desc-text">Connect professionally</p>
               </div>
               <img src="icons/blue_arrow.svg" alt="" width="16" height="16"
                 class="opacity-40 group-hover:opacity-100 transition-opacity" />
@@ -439,9 +419,10 @@
                 <img src="icons/mail_orange.svg" alt="" width="22" height="22" />
               </div>
               <div class="flex-1">
-                <p class="font-mono text-sm font-semibold group-hover:text-yellow-400 transition-colors"
-                  style="color: var(--text-primary);">Email</p>
-                <p id="email-display" style="color: rgba(226,232,240,0.4);">
+                <p
+                  class="primary-text-col font-mono text-sm font-semibold group-hover:text-yellow-400 transition-colors">
+                  Email</p>
+                <p class="desc-text" id="email-display">
                   Open email / copy address
                 </p>
               </div>
@@ -453,8 +434,8 @@
       </div>
     </section><!-- FOOTER -->
     <footer class="bottom-bar px-6 py-6 flex flex-col sm:flex-row items-center justify-between">
-      <p class="font-mono text-xs" style="color: rgba(226,232,240,0.3);">Built with coffee and curiosity</p>
-      <p class="font-mono text-xs" style="color: rgba(226,232,240,0.3);">© 2026 Varun Ravi</p>
+      <p class="desc-text font-mono text-xs">Built with coffee and curiosity</p>
+      <p class="desc-text font-mono text-xs">© 2026 Varun Ravi</p>
     </footer>
   </div>
   <script type="module" src="script.js"></script>

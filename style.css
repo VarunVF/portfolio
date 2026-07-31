@@ -18,6 +18,14 @@ body {
     --accent-secondary: #3b9ef6;
 }
 
+.primary-text-col {
+    color: var(--text-primary);
+}
+
+.accent-col {
+    color: var(--accent);
+}
+
 /* jetbrains-mono-regular - latin */
 @font-face {
   font-display: swap;
@@ -38,6 +46,10 @@ body {
 
 .detail-font {
     font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.desc-text {
+    color: rgba(226,232,240,0.6);
 }
 
 /* Scrollbar */
@@ -142,6 +154,8 @@ body {
 .glow-btn {
     position: relative;
     transition: all 0.3s ease;
+    background: var(--accent);
+    color: var(--bg-primary);
 }
 
 .glow-btn:hover {
@@ -154,6 +168,17 @@ body {
 
 .glow-btn-secondary:hover {
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.15);
+}
+
+.transparent-btn {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+}
+
+/* Linear gradient section line */
+.gradient-line {
+    background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);
 }
 
 /* Staggered reveal */
