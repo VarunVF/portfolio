@@ -8,8 +8,6 @@
   <meta name="description"
     content="Expore the portfolio of Varun Ravi: featuring open-source GitHub projects, indie games on itch.io, software development skills, and technical blog posts.">
   <link rel="icon" href="./icons/code_bracket.svg" type="image/svg+xml">
-  <link rel="preload" href="./fonts/jetbrains-mono-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/dm-sans-v17-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="output.css">
 </head>
 
@@ -40,7 +38,7 @@
             style="color: var(--text-primary);">contact</a>
         </div><button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu"
           style="color: var(--accent); cursor: pointer">
-          <img src="icons/menu.svg" alt="" />
+          <img src="icons/menu.svg" alt="" width="24" height="24" />
         </button>
       </nav>
       <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-3">
@@ -237,27 +235,30 @@
           <div class="flex-1 h-px" style="background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="glass-card rounded-xl p-6 flex justify-center">
-            <div class="flex flex-col gap-y-4">
-              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Samsara Tiles</h3>
-              <iframe src="https://itch.io/embed/3784222?dark=true" title="itch.io, Samsara Tiles" frameborder="0"
-                loading="lazy"><a href="https://varunvf.itch.io/samsara-tiles">Samsara Tiles by varunvf</a></iframe>
+          <a href="https://varunvf.itch.io/samsara-tiles" target="_blank"
+            class="glass-card rounded-xl p-6 flex flex-col gap-y-4 justify-between">
+            <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Samsara Tiles</h3>
+            <p style="color: rgba(226,232,240,0.6);">2D Platformer, made in 3 days for GMTK Game Jam 2025</p>
+            <div class="flex justify-center">
+              <img src="images/samsara-tiles.png" alt="Image for Samsara Tiles" class="game-preview" width="315" height="250" />
             </div>
-          </div>
-          <div class="glass-card rounded-xl p-6 flex justify-center">
-            <div class="flex flex-col gap-y-4">
-              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Maze Runner</h3>
-              <iframe src="https://itch.io/embed/4454051?dark=true" title="itch.io, Maze Runner" frameborder="0"
-                loading="lazy"><a href="https://varunvf.itch.io/maze-runner">Maze Runner by varunvf</a></iframe>
+          </a>
+          <a href="https://varunvf.itch.io/maze-runner" target="_blank"
+            class="glass-card rounded-xl p-6 flex flex-col gap-y-4 justify-between">
+            <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Maze Runner</h3>
+            <p style="color: rgba(226,232,240,0.6);">Timed 3D maze puzzle</p>
+            <div class="flex justify-center">
+              <img src="images/maze-runner.png" alt="Image for Maze Runner" class="game-preview" width="315" height="250" />
             </div>
-          </div>
-          <div class="glass-card rounded-xl p-6 flex justify-center">
-            <div class="flex flex-col gap-y-4">
-              <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Graph It!</h3>
-              <iframe src="https://itch.io/embed/3511149?dark=true" title="itch.io, Graph It!" frameborder="0"
-                loading="lazy"><a href="https://varunvf.itch.io/graph-it">Graph It! by varunvf</a></iframe>
+          </a>
+          <a href="https://varunvf.itch.io/graph-it" target="_blank"
+            class="glass-card rounded-xl p-6 flex flex-col gap-y-4 justify-between">
+            <h3 class="font-mono font-semibold" style="color: var(--text-primary);">Graph It!</h3>
+            <p style="color: rgba(226,232,240,0.6);">Function graphing game, made in 3 days for Mini Jam #183 (Calculations)</p>
+            <div class="flex justify-center">
+              <img src="images/graph-it.png" alt="Image for Graph It!" class="game-preview" width="315" height="250" />
             </div>
-          </div>
+          </a>
         </div>
         <div class="mt-12 text-center"><!-- View itch.io Profile-->
           <a href="#" id="link-itchio" target="_blank"
