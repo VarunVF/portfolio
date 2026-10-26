@@ -11,9 +11,9 @@ export const links = {
         'https://github.com/VarunVF/mathfp-rs',
     ],
     articles: [
-        'https://varunvf.github.io/myOS.html',
-        'https://varunvf.github.io/removing-outliers-for-machine-learning.html',
-        'https://varunvf.github.io/my-experience-learning-to-write-shaders.html',
+        'https://varunvf.github.io/blog/rust-cpp',
+        'https://varunvf.github.io/blog/removing-outliers',
+        'https://varunvf.github.io/blog/writing-shaders',
     ]
 };
 
