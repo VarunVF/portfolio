@@ -58,22 +58,18 @@ function calculateWindowSizeInChars() {
     return [widthInChars, heightInChars];
 }
 
-const binaryLayer1 = document.getElementById('binary-layer-1');
-const binaryLayer2 = document.getElementById('binary-layer-2');
+const binaryLayers = document.querySelectorAll('.binary-layer');
 
 function refreshBackground() {
     const [charsPerLine, lines] = calculateWindowSizeInChars();
 
-    if (binaryLayer1 && binaryLayer2) {
-        // Only need to build the content once
-        let content = '';
-        for (let i = 0; i < lines; i++) {
-            content += generateBinary(charsPerLine) + '\n';
-        }
-
-        binaryLayer1.textContent = content;
-        binaryLayer2.textContent = content;
+    // Only need to build the content once
+    let content = '';
+    for (let i = 0; i < lines; i++) {
+        content += generateBinary(charsPerLine) + '\n';
     }
+
+    binaryLayers.forEach(layer => layer.textContent = content);
 }
 refreshBackground();
 

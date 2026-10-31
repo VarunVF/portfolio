@@ -92,7 +92,7 @@ body {
     border-top: 1px solid rgba(0, 229, 160, 0.08);
 }
 
-/* Animated binary background (hero only) */
+/* Animated binary background */
 .binary-bg {
     position: absolute;
     inset: 0;
@@ -103,6 +103,14 @@ body {
         linear-gradient(to bottom, black 60%, transparent),
         radial-gradient(ellipse 45% 30% at 50% 52%, transparent 40%, black 100%);
     mask-composite: intersect;
+}
+
+/* Faint version behind the whole page */
+.binary-bg-page {
+    position: fixed;
+    z-index: -1;
+    mask-image: none;
+    opacity: 0.35;
 }
 
 @keyframes scrollBinary {
