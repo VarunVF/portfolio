@@ -1,4 +1,4 @@
-import { links, typingPhrases } from "./data.js";
+import { links } from "./data.js";
 
 
 // Load links into html tags
@@ -16,6 +16,7 @@ function initLinks() {
     socials.forEach(platform => {
         initLink(`link-${platform}`, links[platform]);
     });
+    initLink('link-hero-github', links.github);
 
     // projects
     links.projects.forEach((url, index) => {
@@ -77,34 +78,6 @@ function refreshBackground() {
 refreshBackground();
 
 window.addEventListener('resize', refreshBackground);
-
-
-// Typing animation
-let phraseIdx = 0, charIdx = 0, isDeleting = false;
-const typingTarget = document.getElementById('typing-target');
-
-function typeStep() {
-    if (!typingTarget) return;
-    const phrase = typingPhrases[phraseIdx];
-
-    typingTarget.textContent = isDeleting
-        ? phrase.substring(0, charIdx--)
-        : phrase.substring(0, charIdx++);
-
-    let typeSpeed = isDeleting ? 30 : 75;
-
-    if (!isDeleting && charIdx === phrase.length + 1) {
-        isDeleting = true;
-        typeSpeed = 2000; // Pause at end
-    } else if (isDeleting && charIdx === 0) {
-        isDeleting = false;
-        phraseIdx = (phraseIdx + 1) % typingPhrases.length;
-        typeSpeed = 400;
-    }
-
-    setTimeout(typeStep, typeSpeed);
-}
-setTimeout(typeStep, 1200);
 
 
 // UI Logic for scroll and menu

@@ -21,12 +21,3 @@ export const links = {
     makeJelly: 'https://www.roblox.com/games/76290122494040/Make-Jelly',
     glgame2d: 'https://github.com/VarunVF/glgame2d',
 };
-
-export const typingPhrases = [
-    'chasing zero-cost abstractions',
-    'translating math into code',
-    'training ML models',
-    'simulating light with ray tracing',
-    'writing GLSL shaders',
-    'debugging memory leaks',
-];

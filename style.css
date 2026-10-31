@@ -84,7 +84,11 @@ body {
     inset: 0;
     overflow: hidden;
     pointer-events: none;
-    mask-image: linear-gradient(to bottom, black 60%, transparent);
+    /* Fade out towards the bottom, and clear a patch behind the hero text */
+    mask-image:
+        linear-gradient(to bottom, black 60%, transparent),
+        radial-gradient(ellipse 45% 30% at 50% 52%, transparent 40%, black 100%);
+    mask-composite: intersect;
 }
 
 @keyframes scrollBinary {
@@ -116,23 +120,6 @@ body {
     opacity: 0.35;
 }
 
-
-/* Terminal cursor blink */
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-
-.cursor-blink {
-    animation: blink 0.8s step-end infinite;
-}
 
 /* Glassmorphism card */
 .glass-card {
@@ -171,24 +158,18 @@ body {
     }
 }
 
-/* Glow button */
-.glow-btn {
-    position: relative;
-    transition: all 0.3s ease;
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease, filter 0.2s ease;
     background: var(--accent);
     color: var(--bg-primary);
 }
 
-.glow-btn:hover {
-    box-shadow: 0 0 20px rgba(0, 229, 160, 0.4), 0 0 40px rgba(0, 229, 160, 0.15);
-}
-
-.glow-btn-secondary {
-    transition: all 0.3s ease;
-}
-
-.glow-btn-secondary:hover {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.15);
+.btn:hover {
+    filter: brightness(1.1);
 }
 
 .transparent-btn {
@@ -197,47 +178,14 @@ body {
     background: transparent;
 }
 
+.transparent-btn:hover {
+    background: rgba(0, 229, 160, 0.1);
+    filter: none;
+}
+
 /* Linear gradient section line */
 .gradient-line {
     background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);
-}
-
-/* Staggered reveal */
-@keyframes fadeSlideUp {
-    from {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.reveal {
-    opacity: 0;
-    animation: fadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.reveal-d1 {
-    animation-delay: 0.1s;
-}
-
-.reveal-d2 {
-    animation-delay: 0.25s;
-}
-
-.reveal-d3 {
-    animation-delay: 0.4s;
-}
-
-.reveal-d4 {
-    animation-delay: 0.55s;
-}
-
-.reveal-d5 {
-    animation-delay: 0.7s;
 }
 
 /* Text links */

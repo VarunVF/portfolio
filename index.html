@@ -43,35 +43,25 @@
         <a href="#contact" class="primary-text-col font-mono text-sm py-2 opacity-70 hover:opacity-100">contact</a>
       </div>
     </header><!-- HERO -->
-    <section id="hero" class="relative flex items-center justify-center" style="min-height: 100vh; padding-top: 80px;">
+    <section id="hero" class="relative flex items-center justify-center" style="min-height: 70vh; padding-top: 80px;">
       <div class="binary-bg" aria-hidden="true"><!-- Binary Background -->
         <div class="binary-content">
           <div id="binary-layer-1"></div>
           <div id="binary-layer-2"></div>
         </div>
       </div>
-      <div class="absolute top-1/4 left-1/4 w-72 h-72 rounded-full opacity-20 blur-3xl pointer-events-none"
-        style="background: radial-gradient(circle, rgba(0,229,160,0.3), transparent 70%);"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-15 blur-3xl pointer-events-none"
-        style="background: radial-gradient(circle, rgba(59,130,246,0.3), transparent 70%);"></div>
       <div class="max-w-3xl text-center relative z-10">
         <h1
-          class="reveal reveal-d2 primary-text-col font-mono font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-4">
-          <span class="accent-col">&gt; </span><span id="hero-name-text">Varun Ravi</span>
+          class="primary-text-col font-mono font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-4">
+          <span id="hero-name-text">Varun Ravi</span>
         </h1>
-        <div class="reveal reveal-d3 font-mono text-base sm:text-lg md:text-xl mb-6"
-          style="color: var(--accent-secondary);"><span id="hero-title-text">Software Developer &amp; CS Student</span>
-        </div>
-        <div class="reveal reveal-d4 font-mono text-sm sm:text-base mb-10 h-8 flex items-center justify-center"
-          style="color: rgba(226, 232, 240, 0.6);"><span id="typing-target"></span><span
-            class="cursor-blink accent-col">█</span>
-        </div>
-        <div class="reveal reveal-d5 flex flex-wrap gap-4 justify-center"><a href="#projects"
-            class="glow-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-semibold">
-            <img src="icons/star.svg" alt="" width="16" height="16" /> View Projects </a> <a href="#contact"
-            class="glow-btn-secondary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono text-sm font-semibold"
-            style="background: transparent; border: 1px solid var(--accent-secondary); color: var(--accent-secondary);">
-            <img src="icons/mail.svg" alt="" width="16" height="16" /> Contact Me </a>
+        <p id="hero-title-text" class="desc-text font-mono text-base sm:text-lg mb-10">
+          Computer Science @ NUS
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="#projects" class="btn px-6 py-3 rounded-lg font-mono text-sm font-semibold">View Projects</a>
+          <a id="link-hero-github" href="#" target="_blank" rel="noopener noreferrer"
+            class="btn transparent-btn px-6 py-3 rounded-lg font-mono text-sm font-semibold">GitHub</a>
         </div>
       </div>
     </section><!-- ABOUT / INTRO -->
@@ -134,7 +124,7 @@
             </div>
             <div class="flex gap-3">
               <a id="link-project-2" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
+                class="btn px-4 py-2 rounded-lg font-mono text-xs font-semibold">
                 <img src="icons/github.svg" alt="" width="14" height="14" />
                 GitHub
               </a>
@@ -158,7 +148,7 @@
             </div>
             <div class="flex gap-3">
               <a id="link-project-1" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
+                class="btn px-4 py-2 rounded-lg font-mono text-xs font-semibold">
                 <img src="icons/github.svg" alt="" width="14" height="14" />
                 GitHub
               </a>
@@ -177,7 +167,7 @@
             </div>
             <div class="flex gap-3">
               <a id="link-project-3" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
+                class="btn px-4 py-2 rounded-lg font-mono text-xs font-semibold">
                 <img src="icons/github.svg" alt="" width="14" height="14" />
                 GitHub
               </a>
@@ -194,7 +184,7 @@
             </div>
             <div class="flex gap-3">
               <a id="link-project-4" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
+                class="btn px-4 py-2 rounded-lg font-mono text-xs font-semibold">
                 <img src="icons/github.svg" alt="" width="14" height="14" />
                 GitHub
               </a>
@@ -215,7 +205,7 @@
             </div>
             <div class="flex gap-3">
               <a id="link-project-5" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
+                class="btn px-4 py-2 rounded-lg font-mono text-xs font-semibold">
                 <img src="icons/github.svg" alt="" width="14" height="14" />
                 GitHub
               </a>
@@ -260,7 +250,7 @@
         </div>
         <div class="mt-12 text-center"><!-- View itch.io Profile-->
           <a href="#" id="link-itchio" target="_blank"
-            class="glow-btn transparent-btn inline-flex items-center gap-2 px-8 py-3 rounded-lg font-mono text-sm font-semibold transition-all duration-300">
+            class="btn transparent-btn px-8 py-3 rounded-lg font-mono text-sm font-semibold">
             View itch.io Profile
             <img src="icons/rarrow.svg" alt="" width="16" height="16" />
           </a>
@@ -360,7 +350,7 @@
         <!-- View all posts -->
         <div class="mt-12 text-center">
           <a href="#" id="link-blog" target="_blank"
-            class="glow-btn transparent-btn inline-flex items-center gap-2 px-8 py-3 rounded-lg font-mono text-sm font-semibold transition-all duration-300">
+            class="btn transparent-btn px-8 py-3 rounded-lg font-mono text-sm font-semibold">
             View All Articles
             <img src="icons/rarrow.svg" alt="" width="16" height="16" />
           </a>
