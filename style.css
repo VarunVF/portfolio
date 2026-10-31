@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Make Tailwind's font-mono use the bundled JetBrains Mono */
+@theme {
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 html {
     height: 100%;
 }
@@ -33,6 +38,15 @@ body {
   font-style: normal;
   font-weight: 400;
   src: url('./fonts/jetbrains-mono-v24-latin-regular.woff2') format('woff2');
+}
+
+/* jetbrains-mono-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/jetbrains-mono-v24-latin-700.woff2') format('woff2');
 }
 
 /* dm-sans-regular - latin */
