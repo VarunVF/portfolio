@@ -133,14 +133,6 @@ a.glass-card:hover {
     border-color: rgba(0, 229, 160, 0.35);
 }
 
-a.glass-card-blue:hover {
-    border-color: rgba(59, 130, 246, 0.35);
-}
-
-a.glass-card-orange:hover {
-    border-color: rgba(251, 191, 36, 0.35);
-}
-
 /* Project screenshots */
 .project-thumb {
     width: 100%;
