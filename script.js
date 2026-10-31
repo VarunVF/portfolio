@@ -116,8 +116,15 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.section-hidden').forEach(s => observer.observe(s));
 
+const mobileMenu = document.getElementById('mobile-menu');
+
 document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Collapse the menu again once a link is picked
+mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
 });
 
 
