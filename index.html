@@ -119,9 +119,9 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projects-grid">
           <div class="glass-card rounded-xl p-6 lg:col-span-2 flex flex-col">
-            <img src="images/projects/kernel.png" alt="Screenshot of the OS kernel"
+            <img src="images/projects/kernel.png" alt="Screenshot of the x86-64 kernel shell"
               class="project-thumb project-thumb-wide rounded-lg mb-4" />
-            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">OS Kernel</h3>
+            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">x86-64 Kernel</h3>
             <p class="desc-text text-sm mb-4 flex-1">
               A hobby x86-64 kernel in C, booted with Limine. It currently has paging, a kernel heap, APIC interrupts, preemptive multitasking and a small interactive shell.
             </p>
@@ -268,63 +268,39 @@
       </div>
     </section><!-- SKILLS -->
     <section id="skills" class="section-hidden">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-4xl mx-auto">
         <div class="flex items-center gap-4 mb-12">
-          <h2 id="skills-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Tech Stack</h2>
+          <h2 id="skills-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Skills</h2>
           <div class="gradient-line flex-1 h-px"></div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="glass-card rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-5">
-              <div class="p-2 rounded-lg" style="background: rgba(0,229,160,0.1);">
-                <img src="icons/code_bracket.svg" alt="" width="20" height="20" />
-              </div>
-              <h3 class="primary-text-col font-mono font-semibold">Languages &amp; Systems</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">C / C++</span>
-              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Python</span>
-              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Java</span>
-              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">SQL</span>
-              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Rust</span>
-              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">JavaScript</span>
-              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">TypeScript</span>
-              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">GLSL</span>
-              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">x86 ASM</span>
-            </div>
+        <dl class="skill-list font-mono text-sm">
+          <div class="skill-row">
+            <dt class="primary-text-col">C</dt>
+            <dd class="desc-text">x86-64 kernel, CHIP-8 emulator, c3c compiler fix</dd>
           </div>
-          <div class="glass-card rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-5">
-              <div class="p-2 rounded-lg" style="background: rgba(59,130,246,0.1);">
-                <img src="icons/bolt.svg" alt="" width="20" height="20" />
-              </div>
-              <h3 class="primary-text-col font-mono font-semibold">Frameworks &amp; Libraries</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">scikit-learn</span>
-              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">React</span>
-              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Vue.js</span>
-              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">node.js</span>
-              <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">OpenGL</span>
-            </div>
+          <div class="skill-row">
+            <dt class="primary-text-col">C++</dt>
+            <dd class="desc-text">ray tracer, <a id="link-glgame2d" href="#" target="_blank" rel="noopener noreferrer"
+                class="inline-link">glgame2d</a> (2D game framework on OpenGL)</dd>
           </div>
-          <div class="glass-card rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-5">
-              <div class="p-2 rounded-lg" style="background: rgba(168,85,247,0.1);">
-                <img src="icons/wrench_screwdriver.svg" alt="" width="20" height="20" />
-              </div>
-              <h3 class="primary-text-col font-mono font-semibold">Tools &amp; DevOps</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Git</span>
-              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Godot</span>
-              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Linux</span>
-              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">GDB</span>
-              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">CMake</span>
-              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">CI/CD</span>
-            </div>
+          <div class="skill-row">
+            <dt class="primary-text-col">Rust</dt>
+            <dd class="desc-text">MathFP interpreter</dd>
           </div>
-        </div>
+          <div class="skill-row">
+            <dt class="primary-text-col">Python</dt>
+            <dd class="desc-text">brush converter</dd>
+          </div>
+          <div class="skill-row">
+            <dt class="primary-text-col">x86-64 assembly</dt>
+            <dd class="desc-text">kernel GDT, IDT and paging setup</dd>
+          </div>
+          <div class="skill-row">
+            <dt class="primary-text-col">Tools</dt>
+            <dd class="desc-text">Git, GDB, Linux, CMake, Make, QEMU, Godot</dd>
+          </div>
+        </dl>
+        <p class="desc-text font-mono text-sm mt-8">Also used: Java, OpenGL, GLSL, JavaScript</p>
       </div>
     </section><!-- BLOG -->
     <section id="blog" class="section-hidden">

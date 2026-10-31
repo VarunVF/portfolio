@@ -289,6 +289,22 @@ body {
     align-items: center;
 }
 
+/* Skills list */
+.skill-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 0.875rem 0;
+    border-bottom: 1px solid rgba(0, 229, 160, 0.08);
+}
+
+@media (min-width: 40rem) {
+    .skill-row {
+        grid-template-columns: 12rem 1fr;
+        gap: 1.5rem;
+    }
+}
+
 /* Skill badges */
 .skill-badge {
     transition: transform 0.25s ease;

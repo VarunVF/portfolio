@@ -19,6 +19,7 @@ export const links = {
     c3cPR: 'https://github.com/c3lang/c3c/pull/2729',
     cpuDesign: 'https://github.com/VarunVF/cpu-design',
     makeJelly: 'https://www.roblox.com/games/76290122494040/Make-Jelly',
+    glgame2d: 'https://github.com/VarunVF/glgame2d',
 };
 
 export const typingPhrases = [
