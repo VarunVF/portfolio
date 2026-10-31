@@ -6,15 +6,18 @@ export const links = {
     blog: "https://varunvf.github.io/",
     projects: [
         'https://github.com/VarunVF/brush_converter',
-        'https://github.com/VarunVF/RayTracing',
-        'https://github.com/VarunVF/shader',
+        null, // OS kernel: repo not public yet
         'https://github.com/VarunVF/mathfp-rs',
+        'https://github.com/VarunVF/chip8',
+        'https://github.com/VarunVF/RayTracing',
     ],
     articles: [
+        'https://varunvf.github.io/blog/cell-80',
+        'https://varunvf.github.io/blog/std-expected-cpp',
         'https://varunvf.github.io/blog/rust-cpp',
-        'https://varunvf.github.io/blog/removing-outliers',
-        'https://varunvf.github.io/blog/writing-shaders',
-    ]
+    ],
+    c3cPR: 'https://github.com/c3lang/c3c/pull/2729',
+    cpuDesign: 'https://github.com/VarunVF/cpu-design',
 };
 
 export const typingPhrases = [

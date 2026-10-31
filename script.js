@@ -11,8 +11,8 @@ function initLinks() {
         }
     }
 
-    // social links (direct mapping)
-    const socials = ['github', 'linkedin', 'itchio', 'email', 'blog'];
+    // single links (direct mapping)
+    const socials = ['github', 'linkedin', 'itchio', 'email', 'blog', 'c3cPR', 'cpuDesign'];
     socials.forEach(platform => {
         initLink(`link-${platform}`, links[platform]);
     });
@@ -79,38 +79,6 @@ refreshBackground();
 window.addEventListener('resize', refreshBackground);
 
 
-// vim buffer logic
-const vimBufferContent = document.querySelector('div.vim-content');
-
-function refreshVimGutter() {
-    function getVisualLineCount(element) {
-        const style = window.getComputedStyle(element);
-        const height = element.getBoundingClientRect().height;
-        const lineHeight = parseFloat(style.lineHeight);
-
-        return Math.round(height / lineHeight);
-    }
-
-    const gutter = document.querySelector('div.vim-gutter');
-    if (!vimBufferContent || !gutter) return;
-
-    gutter.innerHTML = '';  // Clear the gutter
-    const gutterLines = getVisualLineCount(vimBufferContent);
-    const maxPadding = String(gutterLines).length;
-    for (let i = 0; i < gutterLines; i++) {
-        const paddedLine = String(i).padStart(maxPadding, '0');
-        gutter.innerHTML += paddedLine + "\n";
-        gutter.appendChild(document.createElement('br'));
-    }
-}
-
-// Initial sync
-refreshVimGutter();
-
-// Sync again on resize because wrapping changes
-window.addEventListener('resize', refreshVimGutter);
-
-
 // Typing animation
 let phraseIdx = 0, charIdx = 0, isDeleting = false;
 const typingTarget = document.getElementById('typing-target');
@@ -164,7 +132,7 @@ document.getElementById('link-email').addEventListener('click', () => {
     navigator.clipboard.writeText(email).then(() => {
         // Visual feedback
         display.style.color = '#00e5a0';
-        display.textContent = ' [Copied!]';
+        display.textContent = 'Copied!';
 
         // Reset after 2 seconds
         setTimeout(() => {

@@ -12,12 +12,6 @@
 </head>
 
 <body class="h-full" style="background: var(--bg-primary);">
-  <div class="binary-bg"><!-- Binary Background -->
-    <div class="binary-content">
-      <div id="binary-layer-1"></div>
-      <div id="binary-layer-2"></div>
-    </div>
-  </div>
   <div id="app-root" class="primary-text-col w-full h-full overflow-auto detail-font relative z-10">
     <!-- NAV -->
     <header class="fixed top-bar top-0 left-0 w-full z-50">
@@ -50,6 +44,12 @@
       </div>
     </header><!-- HERO -->
     <section id="hero" class="relative flex items-center justify-center" style="min-height: 100%; padding-top: 80px;">
+      <div class="binary-bg" aria-hidden="true"><!-- Binary Background -->
+        <div class="binary-content">
+          <div id="binary-layer-1"></div>
+          <div id="binary-layer-2"></div>
+        </div>
+      </div>
       <div class="absolute top-1/4 left-1/4 w-72 h-72 rounded-full opacity-20 blur-3xl pointer-events-none"
         style="background: radial-gradient(circle, rgba(0,229,160,0.3), transparent 70%);"></div>
       <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-15 blur-3xl pointer-events-none"
@@ -77,21 +77,19 @@
     </section><!-- ABOUT / INTRO -->
     <section id="about" class="section-hidden">
       <div class="max-w-4xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/about.txt</span>
-        </div>
-        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">00.</span>
-          <h2 id="projects-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">About Me</h2>
+        <div class="flex items-center gap-4 mb-12">
+          <h2 id="about-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">About Me</h2>
           <div class="gradient-line flex-1 h-px"></div>
         </div>
         <div class="vim-buffer">
           <div class="vim-content-wrapper">
-            <div class="vim-gutter" id="vim-gutter-about"></div>
             <div class="vim-content" id="vim-content-about">
               Hi there! I'm a CS student who likes building at the layers people don't always see: interpreters,
               emulators, renderers, assemblers.<br />
               <br />
               I've written a functional math language in Rust, a CHIP-8 emulator in C, and a ray tracer in C++. I also
-              designed a small CPU with a friend; he built it in Logisim and I wrote the assembler.<br />
+              designed a small CPU with a friend; he built it in Logisim and I <a id="link-cpuDesign" href="#" target="_blank"
+                rel="noopener noreferrer" class="inline-link">wrote the assembler</a>.<br />
               <br />
               My most-used project is a tool that converts brushes between painting apps, because I draw too and wanted
               to keep my brushes when switching software.<br />
@@ -100,24 +98,27 @@
           <div class="vim-status"><span>~/portfolio/about.txt</span> <span id="cursor-pos">[vim] utf-8[unix] 1:1</span>
           </div>
         </div>
+        <ul class="highlights font-mono text-sm mt-8 flex flex-col gap-3">
+          <li><span class="accent-col">Open source</span>
+            <span class="desc-text">Merged into the C3 compiler:</span>
+            <a id="link-c3cPR" href="#" target="_blank" rel="noopener noreferrer" class="inline-link">c3c #2729</a>
+          </li>
+          <li><span class="accent-col">Hackathon</span>
+            <span class="desc-text">TODO: event, year, project</span>
+          </li>
+        </ul>
       </div>
     </section><!-- PROJECTS -->
     <section id="projects" class="section-hidden">
       <div class="max-w-6xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/projects</span>
-        </div>
-        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">01.</span>
-          <h2 id="projects-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Featured
-            Projects</h2>
+        <div class="flex items-center gap-4 mb-12">
+          <h2 id="projects-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Projects</h2>
           <div class="gradient-line flex-1 h-px"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projects-grid">
           <div class="glass-card rounded-xl p-6 lg:col-span-2 flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div class="p-3 rounded-lg" style="background: rgba(0, 229, 160, 0.1);">
-                <img src="icons/brush.svg" alt="" width="24" height="24" />
-              </div>
-            </div>
+            <img src="images/projects/brush-converter.png" alt="Screenshot of Brush Converter Tool"
+              class="project-thumb project-thumb-wide rounded-lg mb-4" />
             <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">Brush Converter Tool
             </h3>
             <p class="desc-text text-sm mb-4 flex-1">
@@ -140,9 +141,49 @@
             </div>
           </div>
           <div class="glass-card rounded-xl p-6 flex flex-col">
-            <div class="p-3 rounded-lg mb-4 w-fit" style="background: rgba(59,130,246,0.1);">
-              <img src="icons/cube.svg" alt="" width="24" height="24" />
+            <img src="images/projects/kernel.png" alt="Screenshot of the OS kernel" class="project-thumb rounded-lg mb-4" />
+            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">OS Kernel</h3>
+            <p class="desc-text text-sm mb-4 flex-1">TODO: kernel description.</p>
+            <!-- TODO: kernel tech badges -->
+            <!-- TODO: add GitHub button (link-project-2) once the repo is public -->
+          </div>
+          <div class="glass-card rounded-xl p-6 flex flex-col">
+            <img src="images/projects/mathfp.png" alt="Screenshot of MathFP" class="project-thumb rounded-lg mb-4" />
+            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">MathFP</h3>
+            <p class="desc-text text-sm mb-4 flex-1">A functional, math-oriented
+              scripting language for modeling mathematical functions. Features a custom lexer, parser, AST-based
+              interpreter, and first-class functions. Basic editor support is available for VSCode.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Rust</span>
+              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Interpreters</span>
+              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Functional</span>
             </div>
+            <div class="flex gap-3">
+              <a id="link-project-3" href="#" target="_blank" rel="noopener noreferrer"
+                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
+                <img src="icons/github.svg" alt="" width="14" height="14" />
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-6 flex flex-col">
+            <img src="images/projects/chip8.png" alt="Screenshot of the CHIP-8 emulator" class="project-thumb rounded-lg mb-4" />
+            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">CHIP-8 Emulator</h3>
+            <p class="desc-text text-sm mb-4 flex-1">An emulator (interpreter) for CHIP-8, written in C.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">C</span>
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">Emulation</span>
+            </div>
+            <div class="flex gap-3">
+              <a id="link-project-4" href="#" target="_blank" rel="noopener noreferrer"
+                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
+                <img src="icons/github.svg" alt="" width="14" height="14" />
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-6 flex flex-col">
+            <img src="images/projects/raytracing.png" alt="Screenshot of the ray tracer" class="project-thumb rounded-lg mb-4" />
             <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">3D Ray Tracer</h3>
             <p class="desc-text text-sm mb-4 flex-1">Multithreaded 3D ray tracer for
               photorealistic rendering. Simulates physical effects like reflection, refraction and total internal
@@ -154,50 +195,7 @@
               <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1 rounded-full">Linear Algebra</span>
             </div>
             <div class="flex gap-3">
-              <a id="link-project-2" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
-                <img src="icons/github.svg" alt="" width="14" height="14" />
-                GitHub
-              </a>
-            </div>
-          </div>
-          <div class="glass-card rounded-xl p-6 flex flex-col">
-            <div class="p-3 rounded-lg mb-4 w-fit" style="background: rgba(168,85,247,0.1);">
-              <img src="icons/terminal.svg" alt="" width="24" height="24" />
-            </div>
-            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">Minecraft Shader</h3>
-            <p class="desc-text text-sm mb-4 flex-1">Modified existing rendering pipelines
-              to introduce custom post-processing effects and a day/night lighting system.
-            <div class="flex flex-wrap gap-2 mb-5">
-              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">GLSL</span>
-              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">Shaders</span>
-              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">Game Modding</span>
-            </div>
-            <div class="flex gap-3">
-              <a id="link-project-3" href="#" target="_blank" rel="noopener noreferrer"
-                class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
-                <img src="icons/github.svg" alt="" width="14" height="14" />
-                GitHub
-              </a>
-            </div>
-          </div>
-          <div class="glass-card rounded-xl p-6 flex flex-col lg:col-span-2">
-            <div class="flex items-start justify-between mb-4">
-              <div class="p-3 rounded-lg" style="background: rgba(251,191,36,0.1);">
-                <img src="icons/bulb.svg" alt="" width="24" height="24" />
-              </div>
-            </div>
-            <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">MathFP</h3>
-            <p class="desc-text text-sm mb-4 flex-1">A functional, math-oriented
-              scripting language for modeling mathematical functions. Features a custom lexer, parser, AST-based
-              interpreter, and first-class functions. Basic editor support is available for VSCode.</p>
-            <div class="flex flex-wrap gap-2 mb-5">
-              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Rust</span>
-              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Interpreters</span>
-              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Functional</span>
-            </div>
-            <div class="flex gap-3">
-              <a id="link-project-4" href="#" target="_blank" rel="noopener noreferrer"
+              <a id="link-project-5" href="#" target="_blank" rel="noopener noreferrer"
                 class="glow-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg font-mono text-xs font-semibold">
                 <img src="icons/github.svg" alt="" width="14" height="14" />
                 GitHub
@@ -209,10 +207,8 @@
     </section><!-- GAMES -->
     <section id="games" class="section-hidden">
       <div class="max-w-6xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/games</span>
-        </div>
-        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">02.</span>
-          <h2 id="skills-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Games</h2>
+        <div class="flex items-center gap-4 mb-12">
+          <h2 id="games-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Games</h2>
           <div class="gradient-line flex-1 h-px"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -254,9 +250,7 @@
     </section><!-- SKILLS -->
     <section id="skills" class="section-hidden">
       <div class="max-w-6xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/skills</span>
-        </div>
-        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">03.</span>
+        <div class="flex items-center gap-4 mb-12">
           <h2 id="skills-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Tech Stack</h2>
           <div class="gradient-line flex-1 h-px"></div>
         </div>
@@ -276,7 +270,6 @@
               <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Rust</span>
               <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">JavaScript</span>
               <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">TypeScript</span>
-              <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Godot</span>
               <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">GLSL</span>
               <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">x86 ASM</span>
             </div>
@@ -286,7 +279,7 @@
               <div class="p-2 rounded-lg" style="background: rgba(59,130,246,0.1);">
                 <img src="icons/bolt.svg" alt="" width="20" height="20" />
               </div>
-              <h3 class="primary-text-col font-mono font-semibold">Frameworks &amp; AI/ML</h3>
+              <h3 class="primary-text-col font-mono font-semibold">Frameworks &amp; Libraries</h3>
             </div>
             <div class="flex flex-wrap gap-2">
               <span class="skill-badge blue-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">scikit-learn</span>
@@ -305,6 +298,7 @@
             </div>
             <div class="flex flex-wrap gap-2">
               <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Git</span>
+              <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Godot</span>
               <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">Linux</span>
               <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">GDB</span>
               <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1.5 rounded-lg">CMake</span>
@@ -316,9 +310,7 @@
     </section><!-- BLOG -->
     <section id="blog" class="section-hidden">
       <div class="max-w-6xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/blog</span>
-        </div>
-        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">04.</span>
+        <div class="flex items-center gap-4 mb-12">
           <h2 id="blog-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Latest Articles
           </h2>
           <div class="gradient-line flex-1 h-px"></div>
@@ -326,9 +318,40 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <a href="#" target="_blank" id="link-article-1" rel="noopener noreferrer"
             class="blog-card glass-card rounded-xl p-6 flex flex-col group">
-            <div class="flex items-center gap-2 mb-3">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs px-2 py-0.5 rounded font-mono"
+                style="background: rgba(168,85,247,0.08); color: #a855f7;">Languages</span>
+              <time datetime="2026-10-20" class="desc-text text-xs font-mono">Oct 20, 2026</time>
+            </div>
+            <h3
+              class="primary-text-col font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
+              I Tried Making an Esolang - Here's How it Went</h3>
+            <p class="desc-text text-sm flex-1 mb-4">
+              My experience of trying to design and implement an esolang concept.
+            </p>
+            <div class="blog-line h-0.5 rounded" style="background: #a855f7;"></div>
+          </a>
+          <a href="#" target="_blank" id="link-article-2" rel="noopener noreferrer"
+            class="blog-card glass-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs px-2 py-0.5 rounded font-mono"
+                style="background: rgba(59,130,246,0.08); color: var(--accent-secondary);">C++</span>
+              <time datetime="2026-05-24" class="desc-text text-xs font-mono">May 24, 2026</time>
+            </div>
+            <h3
+              class="primary-text-col font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
+              Expect the Unexpected in C++</h3>
+            <p class="desc-text text-sm flex-1 mb-4">
+              Write more robust code with C++23's std::expected.
+            </p>
+            <div class="blog-line h-0.5 rounded" style="background: var(--accent-secondary);"></div>
+          </a>
+          <a href="#" target="_blank" id="link-article-3" rel="noopener noreferrer"
+            class="blog-card glass-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-center justify-between gap-2 mb-3">
               <span class="text-xs px-2 py-0.5 rounded font-mono"
                 style="background: rgba(0,229,160,0.08); color: var(--accent);">Systems</span>
+              <time datetime="2026-03-16" class="desc-text text-xs font-mono">Mar 16, 2026</time>
             </div>
             <h3
               class="primary-text-col font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
@@ -337,34 +360,6 @@
               Borrowing concepts from Rust like pattern matching, Option, and Result to write better C++ code.
             </p>
             <div class="blog-line h-0.5 rounded" style="background: var(--accent);"></div>
-          </a> <a href="#" target="_blank" id="link-article-2" rel="noopener noreferrer"
-            class="blog-card glass-card rounded-xl p-6 flex flex-col group">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="text-xs px-2 py-0.5 rounded font-mono"
-                style="background: rgba(59,130,246,0.08); color: var(--accent-secondary);">AI/ML</span>
-            </div>
-            <h3
-              class="primary-text-col font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
-              Removing Outliers for Machine Learning</h3>
-            <p class="desc-text text-sm flex-1 mb-4">
-              Some routines for cleaning up outliers in training data for machine learning, using the pandas library in
-              Python.
-            </p>
-            <div class="blog-line h-0.5 rounded" style="background: var(--accent-secondary);"></div>
-          </a> <a href="#" target="_blank" id="link-article-3" rel="noopener noreferrer"
-            class="blog-card glass-card rounded-xl p-6 flex flex-col group">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="text-xs px-2 py-0.5 rounded font-mono"
-                style="background: rgba(168,85,247,0.08); color: #a855f7;">Graphics</span>
-            </div>
-            <h3
-              class="primary-text-col font-mono font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
-              Writing Minecraft Shaders</h3>
-            <p class="desc-text text-sm flex-1 mb-4">
-              My experience learning how to write shaders for Minecraft and several things I learnt about computer
-              graphics along the way.
-            </p>
-            <div class="blog-line h-0.5 rounded" style="background: #a855f7;"></div>
           </a>
         </div>
         <!-- View all posts -->
@@ -379,11 +374,8 @@
     </section><!-- CONTACT -->
     <section id="contact" class="section-hidden">
       <div class="max-w-3xl mx-auto">
-        <div class="breadcrumb mb-8"><a href="#hero">~/portfolio</a><span class="breadcrumb-current">/contact</span>
-        </div>
-        <div class="flex items-center gap-4 mb-12"><span class="accent-col font-mono text-sm">05.</span>
-          <h2 id="contact-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Get In Touch
-          </h2>
+        <div class="flex items-center gap-4 mb-12">
+          <h2 id="contact-heading-text" class="primary-text-col font-mono font-bold text-2xl sm:text-3xl">Contact</h2>
           <div class="gradient-line flex-1 h-px"></div>
         </div>
         <div class="grid grid-cols-1 gap-8">
@@ -397,13 +389,11 @@
                 <p
                   class="primary-text-col font-mono text-sm font-semibold group-hover:text-[var(--accent)] transition-colors">
                   GitHub</p>
-                <p class="desc-text">View repositories &amp; contributions
-                </p>
               </div>
               <img src="icons/green_arrow.svg" alt="" width="16" height="16"
                 class="opacity-40 group-hover:opacity-100 transition-opacity" />
             </a> <a id="link-linkedin" href="#" target="_blank" rel="noopener noreferrer"
-              class="glass-card rounded-xl p-5 flex items-center gap-4 group">
+              class="glass-card glass-card-blue rounded-xl p-5 flex items-center gap-4 group">
               <div class="p-3 rounded-lg transition-colors" style="background: rgba(59,130,246,0.08);">
                 <img src="icons/linkedin.svg" alt="" width="22" height="22" />
               </div>
@@ -411,21 +401,17 @@
                 <p
                   class="primary-text-col font-mono text-sm font-semibold group-hover:text-[var(--accent-secondary)] transition-colors">
                   LinkedIn</p>
-                <p class="desc-text">Connect professionally</p>
               </div>
               <img src="icons/blue_arrow.svg" alt="" width="16" height="16"
                 class="opacity-40 group-hover:opacity-100 transition-opacity" />
-            </a> <a id="link-email" href="#" class="glass-card rounded-xl p-5 flex items-center gap-4 group">
+            </a> <a id="link-email" href="#" class="glass-card glass-card-orange rounded-xl p-5 flex items-center gap-4 group">
               <div class="p-3 rounded-lg transition-colors" style="background: rgba(251,191,36,0.08);">
                 <img src="icons/mail_orange.svg" alt="" width="22" height="22" />
               </div>
               <div class="flex-1">
                 <p
-                  class="primary-text-col font-mono text-sm font-semibold group-hover:text-yellow-400 transition-colors">
-                  Email</p>
-                <p class="desc-text" id="email-display">
-                  Open email / copy address
-                </p>
+                  class="primary-text-col font-mono text-sm font-semibold group-hover:text-yellow-400 transition-colors"
+                  id="email-display">Email</p>
               </div>
               <img src="icons/orange_arrow.svg" alt="" width="16" height="16"
                 class="opacity-40 group-hover:opacity-100 transition-opacity" />
@@ -435,7 +421,8 @@
       </div>
     </section><!-- FOOTER -->
     <footer class="bottom-bar px-6 py-6 flex flex-col sm:flex-row items-center justify-between">
-      <p class="desc-text font-mono text-xs">Built with coffee and curiosity</p>
+      <a id="link-source" href="https://github.com/VarunVF/portfolio" target="_blank" rel="noopener noreferrer"
+        class="desc-text font-mono text-xs hover:text-[var(--accent)] transition-colors">Source on GitHub</a>
       <p class="desc-text font-mono text-xs">© 2026 Varun Ravi</p>
     </footer>
   </div>
