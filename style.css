@@ -125,20 +125,19 @@ body {
 .glass-card {
     background: rgba(17, 24, 39, 0.6);
     border: 2px solid rgba(0, 229, 160, 0.1);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 0.2s ease;
 }
 
-.glass-card:hover {
+/* Only cards that are links react to hover */
+a.glass-card:hover {
     border-color: rgba(0, 229, 160, 0.35);
-    /* box-shadow: 0 0 30px rgba(0, 229, 160, 0.08), inset 0 0 30px rgba(0, 229, 160, 0.03); */
-    transform: translateY(-3px);
 }
 
-.glass-card-blue:hover {
+a.glass-card-blue:hover {
     border-color: rgba(59, 130, 246, 0.35);
 }
 
-.glass-card-orange:hover {
+a.glass-card-orange:hover {
     border-color: rgba(251, 191, 36, 0.35);
 }
 
@@ -181,11 +180,6 @@ body {
 .transparent-btn:hover {
     background: rgba(0, 229, 160, 0.1);
     filter: none;
-}
-
-/* Linear gradient section line */
-.gradient-line {
-    background: linear-gradient(90deg, rgba(0,229,160,0.3), transparent);
 }
 
 /* Text links */
@@ -254,14 +248,6 @@ body {
 }
 
 /* Skill badges */
-.skill-badge {
-    transition: transform 0.25s ease;
-}
-
-.skill-badge:hover {
-    transform: translateY(-2px);
-}
-
 .green-skill-badge {
     background: rgba(0,229,160,0.08);
     border: 1px solid rgba(0,229,160,0.15);
@@ -290,18 +276,6 @@ section {
     padding: 4rem 1.5rem;
 }
 
-/* Section fade-in on scroll */
-.section-hidden {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.section-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Nav link underline */
 .nav-link::after {
     content: '';
@@ -315,15 +289,5 @@ section {
 }
 
 .nav-link:hover::after {
-    width: 100%;
-}
-
-/* Blog card hover line */
-.blog-line {
-    width: 0;
-    transition: width 0.4s ease;
-}
-
-.blog-card:hover .blog-line {
     width: 100%;
 }

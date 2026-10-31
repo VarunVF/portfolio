@@ -80,15 +80,7 @@ refreshBackground();
 window.addEventListener('resize', refreshBackground);
 
 
-// UI Logic for scroll and menu
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('section-visible');
-    });
-}, { threshold: 0.2 });
-
-document.querySelectorAll('.section-hidden').forEach(s => observer.observe(s));
-
+// Mobile menu
 const mobileMenu = document.getElementById('mobile-menu');
 
 document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
