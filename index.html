@@ -113,7 +113,9 @@
               class="project-thumb project-thumb-wide rounded-lg mb-4" />
             <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">x86-64 Kernel</h3>
             <p class="desc-text text-sm mb-4 flex-1">
-              A hobby x86-64 kernel in C, booted with Limine. It currently has paging, a kernel heap, APIC interrupts, preemptive multitasking and a small interactive shell.
+              A hobby x86-64 kernel in C, booted with Limine. It currently has paging, physical and virtual memory
+              management, a kernel heap, APIC interrupts, and preemptive multitasking. It starts up a small interactive
+              shell which renders to the framebuffer.
             </p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1 rounded-full">C</span>
@@ -157,9 +159,11 @@
           <div class="glass-card rounded-xl p-6 flex flex-col">
             <img src="images/projects/mathfp.png" alt="Screenshot of MathFP" class="project-thumb rounded-lg mb-4" />
             <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">MathFP</h3>
-            <p class="desc-text text-sm mb-4 flex-1">A functional, math-oriented
-              scripting language for modeling mathematical functions. Features a custom lexer, parser, AST-based
-              interpreter, and first-class functions. Basic editor support is available for VSCode.</p>
+            <p class="desc-text text-sm mb-4 flex-1">
+              A functional scripting language written in Rust, designed to look and feel like math. The lexer and parser
+              are handwritten to give better error messages with line and column numbers. Expressions can also be
+              transpiled to typeset LaTeX. Basic editor support is available for VS Code.
+            </p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">Rust</span>
               <span class="skill-badge purple-skill-badge text-xs font-mono px-3 py-1 rounded-full">Interpreters</span>
@@ -177,7 +181,10 @@
             <img src="images/projects/chip8.png" alt="Screenshot of the CHIP-8 emulator"
               class="project-thumb rounded-lg mb-4" />
             <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">CHIP-8 Emulator</h3>
-            <p class="desc-text text-sm mb-4 flex-1">An emulator (interpreter) for CHIP-8, written in C.</p>
+            <p class="desc-text text-sm mb-4 flex-1">
+              An emulator for CHIP-8 programs, written in C. It runs games like Tetris and Space Invaders with working
+              sound, using a sine or square wave. Implements the standard CHIP-8 instruction set.
+            </p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">C</span>
               <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Emulation</span>
@@ -194,9 +201,11 @@
             <img src="images/projects/raytracing.png" alt="Screenshot of the ray tracer"
               class="project-thumb rounded-lg mb-4" />
             <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">3D Ray Tracer</h3>
-            <p class="desc-text text-sm mb-4 flex-1">Multithreaded 3D ray tracer for
-              photorealistic rendering. Simulates physical effects like reflection, refraction and total internal
-              reflection.</p>
+            <p class="desc-text text-sm mb-4 flex-1">
+              A ray tracer written in C++. Based on <cite>Ray Tracing in One Weekend</cite>, extended with light sources,
+              plane and triangle shapes, and PNG output via libpng. Rendering is split across all CPU threads, with a
+              PCG hash for fast per-thread random numbers.
+            </p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1 rounded-full">C++</span>
               <span class="skill-badge green-skill-badge text-xs font-mono px-3 py-1 rounded-full">Ray Tracing</span>
@@ -223,7 +232,11 @@
           <a href="https://varunvf.itch.io/samsara-tiles" target="_blank"
             class="glass-card rounded-xl p-6 flex flex-col gap-y-4 justify-between">
             <h3 class="primary-text-col font-mono font-semibold">Samsara Tiles</h3>
-            <p class="desc-text">2D Platformer, made in 3 days for GMTK Game Jam 2025</p>
+            <p class="desc-text text-sm">
+              A 2D platformer where something changes on each loop of the level. Made in 3 days for GMTK Game Jam 2025
+              with mineralwater07 (map design). Written in C++ on a small custom engine based on SDL2, plus its own
+              tile-based level editor.
+            </p>
             <div class="flex justify-center">
               <img src="images/samsara-tiles.png" alt="Image for Samsara Tiles" class="game-preview" width="315"
                 height="250" />
@@ -232,7 +245,10 @@
           <a href="https://varunvf.itch.io/maze-runner" target="_blank"
             class="glass-card rounded-xl p-6 flex flex-col gap-y-4 justify-between">
             <h3 class="primary-text-col font-mono font-semibold">Maze Runner</h3>
-            <p class="desc-text">Timed 3D maze puzzle</p>
+            <p class="desc-text text-sm">
+              A timed 3D maze: collect every item before the clock runs out. Written from scratch in C++ and OpenGL, on a
+              3D extension of my glgame2d framework.
+            </p>
             <div class="flex justify-center">
               <img src="images/maze-runner.png" alt="Image for Maze Runner" class="game-preview" width="315"
                 height="250" />
@@ -241,7 +257,10 @@
           <a href="https://varunvf.itch.io/graph-it" target="_blank"
             class="glass-card rounded-xl p-6 flex flex-col gap-y-4 justify-between">
             <h3 class="primary-text-col font-mono font-semibold">Graph It!</h3>
-            <p class="desc-text">Function graphing game, made in 3 days for Mini Jam #183 (Calculations)</p>
+            <p class="desc-text text-sm">
+              Function graphing game: pick the function(s) whose graph fits the given points. Made in 3 days for Mini Jam
+              #183 (Calculations). Written in Python using pygame-ce.
+            </p>
             <div class="flex justify-center">
               <img src="images/graph-it.png" alt="Image for Graph It!" class="game-preview" width="315" height="250" />
             </div>
