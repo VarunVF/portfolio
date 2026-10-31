@@ -167,6 +167,7 @@ body {
 @media (min-width: 64rem) {
     .project-thumb-wide {
         aspect-ratio: 21 / 9;
+        object-position: top;
     }
 }
 
