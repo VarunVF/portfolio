@@ -12,7 +12,7 @@ function initLinks() {
     }
 
     // single links (direct mapping)
-    const socials = ['github', 'linkedin', 'itchio', 'email', 'blog', 'c3cPR', 'cpuDesign'];
+    const socials = ['github', 'linkedin', 'itchio', 'email', 'blog', 'c3cPR', 'cpuDesign', 'makeJelly'];
     socials.forEach(platform => {
         initLink(`link-${platform}`, links[platform]);
     });
