@@ -12,7 +12,7 @@
 </head>
 
 <body class="h-full" style="background: var(--bg-primary);">
-  <div id="app-root" class="primary-text-col w-full h-full overflow-auto detail-font relative z-10">
+  <div id="app-root" class="primary-text-col w-full detail-font relative z-10">
     <!-- NAV -->
     <header class="fixed top-bar top-0 left-0 w-full z-50">
       <nav class="px-6 py-4 flex justify-between items-center"><a href="#hero"
@@ -43,7 +43,7 @@
         <a href="#contact" class="primary-text-col font-mono text-sm py-2 opacity-70 hover:opacity-100">contact</a>
       </div>
     </header><!-- HERO -->
-    <section id="hero" class="relative flex items-center justify-center" style="min-height: 100%; padding-top: 80px;">
+    <section id="hero" class="relative flex items-center justify-center" style="min-height: 100vh; padding-top: 80px;">
       <div class="binary-bg" aria-hidden="true"><!-- Binary Background -->
         <div class="binary-content">
           <div id="binary-layer-1"></div>
@@ -88,8 +88,8 @@
               emulators, renderers, assemblers.<br />
               <br />
               I've written a functional math language in Rust, a CHIP-8 emulator in C, and a ray tracer in C++. I also
-              designed a small CPU with a friend; he built it in Logisim and I <a id="link-cpuDesign" href="#" target="_blank"
-                rel="noopener noreferrer" class="inline-link">wrote the assembler</a>.<br />
+              designed a small CPU with a friend; he built it in Logisim and I <a id="link-cpuDesign" href="#"
+                target="_blank" rel="noopener noreferrer" class="inline-link">wrote the assembler</a>.<br />
               <br />
               My most-used project is a tool that converts brushes between painting apps, because I draw too and wanted
               to keep my brushes when switching software.<br />
@@ -141,10 +141,19 @@
             </div>
           </div>
           <div class="glass-card rounded-xl p-6 flex flex-col">
-            <img src="images/projects/kernel.png" alt="Screenshot of the OS kernel" class="project-thumb rounded-lg mb-4" />
+            <img src="images/projects/kernel.png" alt="Screenshot of the OS kernel"
+              class="project-thumb rounded-lg mb-4" />
             <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">OS Kernel</h3>
-            <p class="desc-text text-sm mb-4 flex-1">TODO: kernel description.</p>
-            <!-- TODO: kernel tech badges -->
+            <p class="desc-text text-sm mb-4 flex-1">
+              A hobby x86-64 kernel in C, booted with Limine. It currently has paging, a kernel heap, APIC interrupts, preemptive multitasking and a small interactive shell.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">C</span>
+              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">x86-64
+                Assembly</span>
+              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">Limine</span>
+              <span class="skill-badge orange-skill-badge text-xs font-mono px-3 py-1 rounded-full">QEMU</span>
+            </div>
             <!-- TODO: add GitHub button (link-project-2) once the repo is public -->
           </div>
           <div class="glass-card rounded-xl p-6 flex flex-col">
@@ -167,7 +176,8 @@
             </div>
           </div>
           <div class="glass-card rounded-xl p-6 flex flex-col">
-            <img src="images/projects/chip8.png" alt="Screenshot of the CHIP-8 emulator" class="project-thumb rounded-lg mb-4" />
+            <img src="images/projects/chip8.png" alt="Screenshot of the CHIP-8 emulator"
+              class="project-thumb rounded-lg mb-4" />
             <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">CHIP-8 Emulator</h3>
             <p class="desc-text text-sm mb-4 flex-1">An emulator (interpreter) for CHIP-8, written in C.</p>
             <div class="flex flex-wrap gap-2 mb-5">
@@ -183,7 +193,8 @@
             </div>
           </div>
           <div class="glass-card rounded-xl p-6 flex flex-col">
-            <img src="images/projects/raytracing.png" alt="Screenshot of the ray tracer" class="project-thumb rounded-lg mb-4" />
+            <img src="images/projects/raytracing.png" alt="Screenshot of the ray tracer"
+              class="project-thumb rounded-lg mb-4" />
             <h3 class="primary-text-col font-mono font-semibold text-lg mb-2">3D Ray Tracer</h3>
             <p class="desc-text text-sm mb-4 flex-1">Multithreaded 3D ray tracer for
               photorealistic rendering. Simulates physical effects like reflection, refraction and total internal
@@ -404,13 +415,13 @@
               </div>
               <img src="icons/blue_arrow.svg" alt="" width="16" height="16"
                 class="opacity-40 group-hover:opacity-100 transition-opacity" />
-            </a> <a id="link-email" href="#" class="glass-card glass-card-orange rounded-xl p-5 flex items-center gap-4 group">
+            </a> <a id="link-email" href="#"
+              class="glass-card glass-card-orange rounded-xl p-5 flex items-center gap-4 group">
               <div class="p-3 rounded-lg transition-colors" style="background: rgba(251,191,36,0.08);">
                 <img src="icons/mail_orange.svg" alt="" width="22" height="22" />
               </div>
               <div class="flex-1">
-                <p
-                  class="primary-text-col font-mono text-sm font-semibold group-hover:text-yellow-400 transition-colors"
+                <p class="primary-text-col font-mono text-sm font-semibold group-hover:text-yellow-400 transition-colors"
                   id="email-display">Email</p>
               </div>
               <img src="icons/orange_arrow.svg" alt="" width="16" height="16"
