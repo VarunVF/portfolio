@@ -105,6 +105,16 @@ body {
     mask-composite: intersect;
 }
 
+/* Hide the fixed page rain behind the hero so the two layers don't overlap while scrolling */
+#hero {
+    background: linear-gradient(to bottom, var(--bg-primary) 90%, transparent);
+}
+
+/* Make up for the page rain no longer showing through behind the hero */
+#hero .binary-content {
+    opacity: 0.45;
+}
+
 /* Faint version behind the whole page */
 .binary-bg-page {
     position: fixed;
